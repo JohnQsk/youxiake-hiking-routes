@@ -21,7 +21,7 @@ for (const [key, filename] of Object.entries(pages)) {
 for (const page of Object.values(html)) {
   assert.ok(page.includes("https://github.com/vanawaker/youxiake-go"), "Credit link must be visible on every page");
 }
-assert.ok(html.about.includes("吃水不忘挖井人"));
+assert.ok(html.about.includes("致谢"));
 assert.ok(html.about.includes("为什么做"));
 assert.ok(html.advanced.includes("INTENTIONALLY EMPTY"));
 assert.ok(!html.advanced.includes("<table"), "Advanced placeholder must not invent a route table");

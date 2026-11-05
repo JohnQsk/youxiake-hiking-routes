@@ -9,6 +9,7 @@ for (const [key, filename] of Object.entries(pages)) {
   html[key] = await readFile(new URL(filename, root), "utf8");
   assert.match(html[key], /<html lang="zh-CN">/);
   assert.match(html[key], /<title>[^<]+<\/title>/);
+  assert.equal((html[key].match(/<h1[\s>]/g) || []).length, 1, `${filename} needs exactly one h1`);
   assert.equal((html[key].match(/aria-current="page"/g) || []).length, 1, `${filename} needs one current nav item`);
   assert.ok(
     html[key].includes("./beginner.html") && html[key].includes("./about.html") && html[key].includes("./advanced.html"),
@@ -39,6 +40,7 @@ assert.ok(html.beginner.includes('id="weekend-note"'));
 assert.ok(html.beginner.includes("本周末 11/07–08"));
 assert.ok(html.beginner.includes("一日入门种子路线"));
 assert.ok(html.beginner.includes('id="route-rows"'));
+assert.ok(!html.beginner.includes("先看清路线"), "Beginner table page should not keep the oversized slogan");
 assert.ok(html.advanced.includes('data-routes="./data/advanced-routes.json"'));
 assert.ok(html.advanced.includes('data-weekend="./data/weekend-availability.json"'));
 assert.ok(html.advanced.includes('id="weekend-filter"'));
@@ -46,6 +48,7 @@ assert.ok(html.advanced.includes('id="weekend-note"'));
 assert.ok(html.advanced.includes("本周末 11/07–08"));
 assert.ok(html.advanced.includes('id="route-rows"'));
 assert.ok(html.advanced.includes("进阶线对照表"));
+assert.ok(!html.advanced.includes("先把强度看清"), "Advanced table page should not keep the oversized slogan");
 assert.ok(!html.advanced.includes("placeholder-inner"), "Advanced page must render verified routes, not a placeholder");
 
 console.log("PASS: four pages, local links, current navigation, credit links, home weekend preview and both route filters.");

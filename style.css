@@ -41,6 +41,11 @@ h1 em { color: var(--green); font-style: normal; }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 12px 34px; color: var(--muted); font-size: 13px; }
 .hero-meta span { display: flex; align-items: baseline; gap: 7px; }
 .hero-meta strong { color: var(--ink); font-weight: 700; }
+.hero.hero-compact { padding: 44px 0 36px; }
+.hero-compact .hero-copy { margin: 0 0 24px; }
+.subpage-hero.compact { padding: 44px 0 32px; }
+.subpage-hero.compact .hero-copy { margin: 0 0 24px; }
+h1.table-title { max-width: none; margin: 0; font-size: clamp(28px, 3vw, 40px); line-height: 1.1; letter-spacing: -.04em; }
 
 .weekend-preview { margin-bottom: 28px; padding: 30px; border-radius: 22px; background: var(--ink); color: white; box-shadow: var(--shadow); }
 .weekend-heading { display: flex; justify-content: space-between; align-items: start; gap: 20px; }
@@ -187,6 +192,8 @@ footer p { margin: 8px 0 0; color: var(--muted); font-size: 12px; line-height: 1
   .credit-box .primary-link { display: inline-block; margin-top: 22px; }
   .placeholder { min-height: 480px; padding: 55px 8px; }
   .hero { padding: 52px 0 44px; }
+  .hero.hero-compact { padding: 36px 0 28px; }
+  .subpage-hero.compact { padding: 36px 0 28px; }
   .hero::after { width: 240px; height: 240px; right: -100px; }
   .hero-copy { font-size: 15px; }
   .hero-meta { display: grid; gap: 10px; }

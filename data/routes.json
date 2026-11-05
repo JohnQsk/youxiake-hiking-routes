@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "title": "上海一日徒步路线实验数据集",
+  "checked_at": "2026-11-05",
+  "scope": "Shaoke 提供的游侠客 App 截图中的 21 条上海出发一日游；不是游侠客全量路线库。",
+  "source": "游侠客公开活动详情页",
+  "routes": [
+    {
+      "id": "55996",
+      "name": "仙踪新昌·韩妃江古道 | 邂逅“江南小桂林”",
+      "short_name": "韩妃江古道",
+      "screenshot_order": 1,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 225, "max_minutes": 225, "text": "上海—新昌，约3小时45分"},
+      "hiking_options": [
+        {"key": "autumn-winter", "label": "秋冬季批次", "distance_km": 11, "ascent_m": 320, "note": "2026-11-02后至2027-03批次；下降约280m"},
+        {"key": "spring-summer", "label": "春夏季穿越线", "distance_km": 8, "ascent_m": 140, "note": "4—10月；下降约400m"}
+      ],
+      "source_excerpt": "秋冬季徒步11公里左右，累计爬升320；春夏季8km，累计爬升140米。",
+      "source_url": "https://www.youxiake.com/lines.html?id=55996",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "56151",
+      "name": "天目秘境·大树王国 | 步入天目秋意森林",
+      "short_name": "大树王国",
+      "screenshot_order": 2,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 240, "max_minutes": 240, "text": "上海—临安，约4h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 7, "ascent_m": 800, "note": "另有约2km景区漫逛，未并入7km排序值"}
+      ],
+      "source_excerpt": "徒步约7km+2km景区漫逛，累计爬升800m左右。",
+      "source_url": "https://www.youxiake.com/lines.html?id=56151",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "54485",
+      "name": "立秋·梅坞古道 | 邂逅碧蓝澄湖，秋意渐浓",
+      "short_name": "梅坞古道",
+      "screenshot_order": 3,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 180, "max_minutes": 180, "text": "约3h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 5, "ascent_m": 160, "note": ""}
+      ],
+      "source_excerpt": "徒步5km、累计爬升160米。",
+      "source_url": "https://www.youxiake.com/lines.html?id=54485",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "27926",
+      "name": "长兴·碧岩古道 | 千年碧岩，徒步风车山脊线",
+      "short_name": "长兴·碧岩古道",
+      "screenshot_order": 4,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 150, "max_minutes": 150, "text": "上海—湖州，约2.5h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 10, "ascent_m": 458, "note": "最高海拔514m；不要把最高海拔当累计爬升"}
+      ],
+      "source_excerpt": "今日徒步约10km，累计上升458m，海拔最高514m。",
+      "source_url": "https://www.youxiake.com/lines.html?id=27926",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "20005",
+      "name": "古道·莫干山 | 徒步蒋公道 竹海胜地 民国建筑",
+      "short_name": "古道·莫干山",
+      "screenshot_order": 5,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 210, "max_minutes": 210, "text": "上海—莫干山镇，约3.5h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 10, "ascent_m": 576, "note": "最高海拔622m"}
+      ],
+      "source_excerpt": "今日徒步10km左右，海拔爬升576m，海拔622m。",
+      "source_url": "https://www.youxiake.com/lines.html?id=20005",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "55711",
+      "name": "云上茶乡·仙韵凸山 | 嶀山吃年糕寻孤独的树",
+      "short_name": "仙韵凸山",
+      "screenshot_order": 6,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 195, "max_minutes": 195, "text": "上海—沈湖村2.5h；沈湖村—嶀山0.75h"},
+      "hiking_options": [
+        {"key": "full", "label": "全程 A+B 段", "distance_km": 6, "ascent_m": 600, "note": "官方写累计爬升600m+"},
+        {"key": "half", "label": "半程 B 段", "distance_km": null, "ascent_m": 300, "note": "半程方案未公开总徒步距离"}
+      ],
+      "source_excerpt": "嶀山徒步6km左右，累计爬升600m+；半程B段爬升300m。",
+      "source_url": "https://www.youxiake.com/lines.html?id=55711",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "20380",
+      "name": "浙东天青·上青古道 | 青山藏旧迹，古道听风吟",
+      "short_name": "上青古道",
+      "screenshot_order": 7,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 180, "max_minutes": 180, "text": "约3h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 8, "ascent_m": 480, "note": "石板路、土路、台阶为主"}
+      ],
+      "source_excerpt": "今日徒步8KM，石板路、土路、台阶为主，爬升480M。",
+      "source_url": "https://www.youxiake.com/lines.html?id=20380",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "49144",
+      "name": "千年香榧·走马岗 | 邂逅原始童话秘境",
+      "short_name": "走马岗",
+      "screenshot_order": 8,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 210, "max_minutes": 210, "text": "上海—诸暨，约3.5h"},
+      "hiking_options": [
+        {"key": "without-shuttle", "label": "不乘政府接驳车", "distance_km": 16.5, "ascent_m": null, "note": "16.5km仅适用于不乘接驳车"},
+        {"key": "with-shuttle", "label": "乘政府接驳车", "distance_km": null, "ascent_m": null, "note": "官方未公开此方案总距离与累计爬升"}
+      ],
+      "source_excerpt": "若不乘坐接驳车则总徒步距离为16.5km左右。",
+      "source_url": "https://www.youxiake.com/lines.html?id=49144",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "18673",
+      "name": "西湖群山·九溪十八涧 | 步入十里琅珰",
+      "short_name": "九溪十八涧",
+      "screenshot_order": 9,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 210, "max_minutes": 210, "text": "上海—九溪，约3.5h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": null, "ascent_m": null, "note": "详情中的最后3km是前往大巴处的可选路段，不是全程距离"}
+      ],
+      "source_excerpt": "官方详情未写全程徒步距离和累计爬升。",
+      "source_url": "https://www.youxiake.com/lines.html?id=18673",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "56054",
+      "name": "空谷栖云·埃码尖 | 小众山野清闲古道",
+      "short_name": "埃码尖",
+      "screenshot_order": 10,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 180, "max_minutes": 180, "text": "上海—柯桥，约3h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 12, "ascent_m": 600, "note": ""}
+      ],
+      "source_excerpt": "全程徒步12公里左右，累计爬升600m左右。",
+      "source_url": "https://www.youxiake.com/lines.html?id=56054",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "48878",
+      "name": "东盘山·风车草甸 | 登浙东小武功，高山草甸",
+      "short_name": "东盘山·风车草甸",
+      "screenshot_order": 11,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 240, "max_minutes": 240, "text": "上海—宁波北仑，约4h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 8, "ascent_m": 500, "note": ""}
+      ],
+      "source_excerpt": "今日徒步全程8km左右，累计上升500m左右。",
+      "source_url": "https://www.youxiake.com/lines.html?id=48878",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "56318",
+      "name": "云深林隐·穹窿山 | 乾隆六下江南福地",
+      "short_name": "穹窿山",
+      "screenshot_order": 12,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 120, "max_minutes": 120, "text": "上海—穹窿山，约2h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 9.5, "ascent_m": 500, "note": "官方另写下降约491m"}
+      ],
+      "source_excerpt": "徒步距离约9.5千米，5小时；爬升约500米，下降约491米。",
+      "source_url": "https://www.youxiake.com/lines.html?id=56318",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "47990",
+      "name": "祈福迎新·江南小长城 | 祈福福源禅寺",
+      "short_name": "江南小长城",
+      "screenshot_order": 13,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 150, "max_minutes": 150, "text": "单程约2.5h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 8, "ascent_m": 400, "note": ""}
+      ],
+      "source_excerpt": "今日徒步8km左右，累计爬升约400米左右。",
+      "source_url": "https://www.youxiake.com/lines.html?id=47990",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "30131",
+      "name": "太湖徒步·莫厘听涛 | 登顶东山莫厘峰",
+      "short_name": "莫厘听涛",
+      "screenshot_order": 14,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 120, "max_minutes": 150, "text": "上海—东山，约2—2.5h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 12, "ascent_m": null, "note": "距离来自具体行程；官方未写累计爬升"}
+      ],
+      "source_excerpt": "到达徒步起点开始，领队带大家热身好，开始全程12公里徒步。",
+      "source_url": "https://www.youxiake.com/lines.html?id=30131",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "38628",
+      "name": "径山·祈福 | 禅徒静心，竹林蜿蜒，钟声悠扬",
+      "short_name": "径山·祈福",
+      "screenshot_order": 15,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 180, "max_minutes": 180, "text": "约3h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 6.5, "ascent_m": 400, "note": "官方另写下降约400m"}
+      ],
+      "source_excerpt": "徒步距离约6.50千米，5小时；爬升约400米，下降约400米。",
+      "source_url": "https://www.youxiake.com/lines.html?id=38628",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "55495",
+      "name": "众里寻花·西湖漫游 | 登纳福云台，俯瞰西湖",
+      "short_name": "西湖漫游·纳福云台",
+      "screenshot_order": 16,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 180, "max_minutes": 180, "text": "约3h，含服务区停靠"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 10, "ascent_m": 310, "note": ""}
+      ],
+      "source_excerpt": "10km左右，累计爬升310m左右。",
+      "source_url": "https://www.youxiake.com/lines.html?id=55495",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "51688",
+      "name": "周末轻徒·钱湖秘境 | 祭岭古道，一览东钱湖",
+      "short_name": "钱湖秘境",
+      "screenshot_order": 17,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 210, "max_minutes": 210, "text": "上海—宁波，约3.5h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 9, "ascent_m": 190, "note": "最高海拔约212m"}
+      ],
+      "source_excerpt": "约9公里，累计爬升190米，最高海拔约212米。",
+      "source_url": "https://www.youxiake.com/lines.html?id=51688",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "54856",
+      "name": "寻味·荻港古镇 | 轻徒金盖山，逛吃古镇",
+      "short_name": "荻港古镇·金盖山",
+      "screenshot_order": 18,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 150, "max_minutes": 150, "text": "约2.5h"},
+      "hiking_options": [
+        {"key": "default", "label": "金盖山徒步", "distance_km": 6, "ascent_m": 270, "note": "荻港古镇自由逛不包含在6km中"}
+      ],
+      "source_excerpt": "金盖山徒步为6公里左右，爬升270米左右，荻港古镇自由逛。",
+      "source_url": "https://www.youxiake.com/lines.html?id=54856",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "42452",
+      "name": "山水慈溪·桃花岭 | 探访方家河头村，寻柿林",
+      "short_name": "桃花岭",
+      "screenshot_order": 19,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 210, "max_minutes": 210, "text": "上海—慈溪，约3.5h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 7, "ascent_m": 364, "note": ""}
+      ],
+      "source_excerpt": "今日徒步约7km左右，累计上升364米。",
+      "source_url": "https://www.youxiake.com/lines.html?id=42452",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "53158",
+      "name": "潺涧飞瀑·栲栳山巅 | 打卡宁波里约热内卢",
+      "short_name": "栲栳山巅",
+      "screenshot_order": 20,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 180, "max_minutes": 180, "text": "约3h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 9, "ascent_m": 500, "note": "最高海拔435m"}
+      ],
+      "source_excerpt": "徒步全长约9km左右，累计上升500米左右，海拔435米。",
+      "source_url": "https://www.youxiake.com/lines.html?id=53158",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "41796",
+      "name": "秘色慈溪·栲栳山 | 走进青瓷，畅游千年古镇",
+      "short_name": "秘色慈溪·栲栳山",
+      "screenshot_order": 21,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 180, "max_minutes": 180, "text": "约3h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 6.6, "ascent_m": 230, "note": "登顶需折返；最高海拔435m"}
+      ],
+      "source_excerpt": "徒步全长约6.6km，累计上升230米左右，海拔435米。",
+      "source_url": "https://www.youxiake.com/lines.html?id=41796",
+      "checked_at": "2026-11-05"
+    }
+  ]
+}

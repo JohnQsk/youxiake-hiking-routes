@@ -1,0 +1,25 @@
+﻿id,name,departure_city,days,drive_min_minutes,drive_max_minutes,drive_text,option_key,option_label,distance_km,ascent_m,option_note,source_url,checked_at
+55996,仙踪新昌·韩妃江古道 | 邂逅“江南小桂林”,上海,1,225,225,上海—新昌，约3小时45分,autumn-winter,秋冬季批次,11,320,2026-11-02后至2027-03批次；下降约280m,https://www.youxiake.com/lines.html?id=55996,2026-11-05
+55996,仙踪新昌·韩妃江古道 | 邂逅“江南小桂林”,上海,1,225,225,上海—新昌，约3小时45分,spring-summer,春夏季穿越线,8,140,4—10月；下降约400m,https://www.youxiake.com/lines.html?id=55996,2026-11-05
+56151,天目秘境·大树王国 | 步入天目秋意森林,上海,1,240,240,上海—临安，约4h,default,默认路线,7,800,另有约2km景区漫逛，未并入7km排序值,https://www.youxiake.com/lines.html?id=56151,2026-11-05
+54485,立秋·梅坞古道 | 邂逅碧蓝澄湖，秋意渐浓,上海,1,180,180,约3h,default,默认路线,5,160,,https://www.youxiake.com/lines.html?id=54485,2026-11-05
+27926,长兴·碧岩古道 | 千年碧岩，徒步风车山脊线,上海,1,150,150,上海—湖州，约2.5h,default,默认路线,10,458,最高海拔514m；不要把最高海拔当累计爬升,https://www.youxiake.com/lines.html?id=27926,2026-11-05
+20005,古道·莫干山 | 徒步蒋公道 竹海胜地 民国建筑,上海,1,210,210,上海—莫干山镇，约3.5h,default,默认路线,10,576,最高海拔622m,https://www.youxiake.com/lines.html?id=20005,2026-11-05
+55711,云上茶乡·仙韵凸山 | 嶀山吃年糕寻孤独的树,上海,1,195,195,上海—沈湖村2.5h；沈湖村—嶀山0.75h,full,全程 A+B 段,6,600,官方写累计爬升600m+,https://www.youxiake.com/lines.html?id=55711,2026-11-05
+55711,云上茶乡·仙韵凸山 | 嶀山吃年糕寻孤独的树,上海,1,195,195,上海—沈湖村2.5h；沈湖村—嶀山0.75h,half,半程 B 段,,300,半程方案未公开总徒步距离,https://www.youxiake.com/lines.html?id=55711,2026-11-05
+20380,浙东天青·上青古道 | 青山藏旧迹，古道听风吟,上海,1,180,180,约3h,default,默认路线,8,480,石板路、土路、台阶为主,https://www.youxiake.com/lines.html?id=20380,2026-11-05
+49144,千年香榧·走马岗 | 邂逅原始童话秘境,上海,1,210,210,上海—诸暨，约3.5h,without-shuttle,不乘政府接驳车,16.5,,16.5km仅适用于不乘接驳车,https://www.youxiake.com/lines.html?id=49144,2026-11-05
+49144,千年香榧·走马岗 | 邂逅原始童话秘境,上海,1,210,210,上海—诸暨，约3.5h,with-shuttle,乘政府接驳车,,,官方未公开此方案总距离与累计爬升,https://www.youxiake.com/lines.html?id=49144,2026-11-05
+18673,西湖群山·九溪十八涧 | 步入十里琅珰,上海,1,210,210,上海—九溪，约3.5h,default,默认路线,,,详情中的最后3km是前往大巴处的可选路段，不是全程距离,https://www.youxiake.com/lines.html?id=18673,2026-11-05
+56054,空谷栖云·埃码尖 | 小众山野清闲古道,上海,1,180,180,上海—柯桥，约3h,default,默认路线,12,600,,https://www.youxiake.com/lines.html?id=56054,2026-11-05
+48878,东盘山·风车草甸 | 登浙东小武功，高山草甸,上海,1,240,240,上海—宁波北仑，约4h,default,默认路线,8,500,,https://www.youxiake.com/lines.html?id=48878,2026-11-05
+56318,云深林隐·穹窿山 | 乾隆六下江南福地,上海,1,120,120,上海—穹窿山，约2h,default,默认路线,9.5,500,官方另写下降约491m,https://www.youxiake.com/lines.html?id=56318,2026-11-05
+47990,祈福迎新·江南小长城 | 祈福福源禅寺,上海,1,150,150,单程约2.5h,default,默认路线,8,400,,https://www.youxiake.com/lines.html?id=47990,2026-11-05
+30131,太湖徒步·莫厘听涛 | 登顶东山莫厘峰,上海,1,120,150,上海—东山，约2—2.5h,default,默认路线,12,,距离来自具体行程；官方未写累计爬升,https://www.youxiake.com/lines.html?id=30131,2026-11-05
+38628,径山·祈福 | 禅徒静心，竹林蜿蜒，钟声悠扬,上海,1,180,180,约3h,default,默认路线,6.5,400,官方另写下降约400m,https://www.youxiake.com/lines.html?id=38628,2026-11-05
+55495,众里寻花·西湖漫游 | 登纳福云台，俯瞰西湖,上海,1,180,180,约3h，含服务区停靠,default,默认路线,10,310,,https://www.youxiake.com/lines.html?id=55495,2026-11-05
+51688,周末轻徒·钱湖秘境 | 祭岭古道，一览东钱湖,上海,1,210,210,上海—宁波，约3.5h,default,默认路线,9,190,最高海拔约212m,https://www.youxiake.com/lines.html?id=51688,2026-11-05
+54856,寻味·荻港古镇 | 轻徒金盖山，逛吃古镇,上海,1,150,150,约2.5h,default,金盖山徒步,6,270,荻港古镇自由逛不包含在6km中,https://www.youxiake.com/lines.html?id=54856,2026-11-05
+42452,山水慈溪·桃花岭 | 探访方家河头村，寻柿林,上海,1,210,210,上海—慈溪，约3.5h,default,默认路线,7,364,,https://www.youxiake.com/lines.html?id=42452,2026-11-05
+53158,潺涧飞瀑·栲栳山巅 | 打卡宁波里约热内卢,上海,1,180,180,约3h,default,默认路线,9,500,最高海拔435m,https://www.youxiake.com/lines.html?id=53158,2026-11-05
+41796,秘色慈溪·栲栳山 | 走进青瓷，畅游千年古镇,上海,1,180,180,约3h,default,默认路线,6.6,230,登顶需折返；最高海拔435m,https://www.youxiake.com/lines.html?id=41796,2026-11-05

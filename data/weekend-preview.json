@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "nearest_weekend_manual_snapshot",
+  "route_id": "56151",
+  "route_name": "天目秘境·大树王国",
+  "fetched_at": "2026-11-05T11:04:38+08:00",
+  "complete": true,
+  "source_url": "https://www.youxiake.com/lines.html?id=56151",
+  "source_method": "youxiake-go calendar query; official page badge checked with a clean Chrome profile",
+  "days": [
+    {
+      "date": "2026-11-07",
+      "weekday": "周六",
+      "status_code": 2,
+      "status": "full",
+      "status_label": "暂满",
+      "price_cny": 185,
+      "participant_count": null,
+      "weather": null,
+      "weather_note": "暂满日期未查询天气"
+    },
+    {
+      "date": "2026-11-08",
+      "weekday": "周日",
+      "status_code": 1,
+      "status": "available",
+      "status_label": "可报名",
+      "price_cny": 185,
+      "participant_count": null,
+      "weather": {
+        "provider": "Open-Meteo",
+        "location": "天目山附近网格，非景区入口精确预报",
+        "requested_latitude": 30.39431,
+        "requested_longitude": 119.43292,
+        "grid_latitude": 30.404217,
+        "grid_longitude": 119.47183,
+        "grid_elevation_m": 1478,
+        "weather_code": 81,
+        "weather_label": "阵雨",
+        "temperature_min_c": 5.5,
+        "temperature_max_c": 9.8,
+        "precipitation_probability_max": 100,
+        "precipitation_sum_mm": 34.6,
+        "wind_speed_max_kmh": 18.0,
+        "source_url": "https://api.open-meteo.com/v1/forecast?latitude=30.39431&longitude=119.43292&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,precipitation_sum,wind_speed_10m_max&timezone=Asia%2FShanghai&start_date=2026-11-07&end_date=2026-11-08"
+      }
+    }
+  ]
+}

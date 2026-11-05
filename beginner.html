@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="21 条上海出发的一日入门徒步路线，按官方参考车程、距离与累计爬升比较。">
+  <title>一日入门线 · 徙野</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body data-routes="./data/routes.json" data-weekend="./data/weekend-availability.json">
+  <main class="page-shell">
+    <nav class="topbar" aria-label="项目导航">
+      <a class="brand" href="./" aria-label="徙野首页">
+        <span class="brand-mark" aria-hidden="true">XY</span>
+        <span>徙野 <small>ROUTE LAB</small></span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="./">首页</a>
+        <a class="nav-link" href="./beginner.html" aria-current="page">一日入门线</a>
+        <a class="nav-link" href="./advanced.html">进阶线</a>
+        <a class="nav-link" href="./about.html">关于</a>
+        <a class="repo-link" href="https://github.com/JohnQsk/youxiake-hiking-routes">GitHub ↗</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <p class="eyebrow">ENTRY / SHANGHAI DAY HIKING</p>
+      <h1>先看清路线，<br><em>再决定出发。</em></h1>
+      <p class="hero-copy">21 条上海出发的一日入门路线。按官方参考车程、徒步距离和累计爬升比较，并标注本周末能否报名。</p>
+      <div class="hero-meta" aria-label="数据集摘要">
+        <span><strong id="route-total">21</strong> 条一日入门种子路线</span>
+        <span><strong>2026-11-05</strong> 官方详情核对</span>
+        <span><strong>静态数据</strong> 非实时班期</span>
+      </div>
+    </header>
+
+    <section class="explorer" aria-labelledby="explorer-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-number">01 / ROUTE EXPLORER</p>
+          <h2 id="explorer-title">路线对照表</h2>
+        </div>
+        <p id="result-summary" class="result-summary" aria-live="polite">正在读取路线数据…</p>
+      </div>
+
+      <div class="controls with-weekend" aria-label="路线筛选与排序">
+        <label class="search-control">
+          <span>搜索路线</span>
+          <input id="search" type="search" placeholder="例如：莫干山、大树王国" autocomplete="off">
+        </label>
+        <label>
+          <span>排序方式</span>
+          <select id="sort">
+            <option value="drive-asc">车程：从短到长</option>
+            <option value="drive-desc">车程：从长到短</option>
+            <option value="distance-asc">距离：从短到长</option>
+            <option value="distance-desc">距离：从长到短</option>
+            <option value="ascent-asc">爬升：从低到高</option>
+            <option value="ascent-desc">爬升：从高到低</option>
+            <option value="screenshot">截图原始顺序</option>
+          </select>
+        </label>
+        <label>
+          <span>参考车程上限</span>
+          <select id="max-drive">
+            <option value="">不限</option>
+            <option value="120">≤ 2 小时</option>
+            <option value="150">≤ 2.5 小时</option>
+            <option value="180">≤ 3 小时</option>
+            <option value="210">≤ 3.5 小时</option>
+            <option value="240">≤ 4 小时</option>
+          </select>
+        </label>
+        <label>
+          <span>累计爬升上限</span>
+          <select id="max-ascent">
+            <option value="">不限</option>
+            <option value="200">≤ 200m</option>
+            <option value="300">≤ 300m</option>
+            <option value="400">≤ 400m</option>
+            <option value="500">≤ 500m</option>
+            <option value="600">≤ 600m</option>
+            <option value="800">≤ 800m</option>
+          </select>
+        </label>
+        <label>
+          <span>本周末报名</span>
+          <select id="weekend-filter">
+            <option value="">不限</option>
+            <option value="bookable">可报名</option>
+            <option value="unavailable">不可报名</option>
+          </select>
+        </label>
+        <button id="reset" class="reset-button" type="button">重置</button>
+      </div>
+
+      <p class="control-note">筛选使用当前选中的路线方案；开启上限筛选时，未公开对应数值的路线会被排除。</p>
+      <p id="weekend-note" class="weekend-note">本周末班期来自 2026-11-05 11:45 的团期快照，不自动刷新；“确定成行”班次仍可报名。</p>
+
+      <div class="table-wrap" tabindex="0" aria-label="可横向滚动的路线表">
+        <table class="weekend-table">
+          <thead>
+            <tr>
+              <th scope="col">路线 / 方案</th>
+              <th scope="col">官方参考车程</th>
+              <th scope="col">徒步距离</th>
+              <th scope="col">累计爬升</th>
+              <th scope="col">本周末 11/07–08</th>
+              <th scope="col">来源</th>
+            </tr>
+          </thead>
+          <tbody id="route-rows"></tbody>
+        </table>
+      </div>
+      <p id="empty-state" class="empty-state" hidden>没有符合条件的路线。试试放宽筛选，或切换多方案路线。</p>
+      <noscript>此对照表需要 JavaScript；也可以直接查看 <a href="./data/routes.json">routes.json</a>。</noscript>
+    </section>
+
+    <section class="notes" aria-labelledby="notes-title">
+      <div>
+        <p class="section-number">02 / DATA NOTES</p>
+        <h2 id="notes-title">数字有边界，<br>选择有上下文。</h2>
+      </div>
+      <div class="note-list">
+        <details open>
+          <summary>这些数字从哪里来？</summary>
+          <p>来自 2026-11-05 核对的游侠客公开活动详情页。每条路线都保留官方来源链接与短摘录；这 21 条来自一张 App 候选截图，不是全量路线库。</p>
+        </details>
+        <details>
+          <summary>为什么有“未公开”？</summary>
+          <p>未公开表示官方页面没有明确写出总量，绝不按 0 处理。最高海拔、下降、某一段接驳距离也不会被误当成累计爬升或全程徒步距离。</p>
+        </details>
+        <details>
+          <summary>车程和难度是否固定？</summary>
+          <p>车程是官方写明的单程或分段参考时间，不是实时导航时间。距离和爬升也不等于完整难度；天气、路况、季节与个人体能仍需另行判断。</p>
+        </details>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <strong>徙野 / ROUTE LAB</strong>
+        <p>一个公开、可溯源的个人路线比较实验。</p>
+      </div>
+      <div class="footer-links">
+        <a href="./">返回首页</a>
+        <a href="./advanced.html">进阶线</a>
+        <a href="./about.html">为什么做徙野</a>
+        <a href="./data/routes.json">JSON 数据 ↗</a>
+        <a href="https://github.com/vanawaker/youxiake-go">查询工具：youxiake-go ↗</a>
+        <a href="https://github.com/JohnQsk/youxiake-hiking-routes">仓库与说明 ↗</a>
+      </div>
+      <p class="disclaimer">非游侠客官方项目。路线名称与原始数据归相应权利人所有；不出售数据，不提供报名服务。实际行程以官方最新页面和出团通知为准。</p>
+    </footer>
+  </main>
+</body>
+</html>

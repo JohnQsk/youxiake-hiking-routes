@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="徙野进阶路线合集，等待后续补充经核对的数据。">
+  <meta name="description" content="16 条上海出发的一日进阶徒步路线：按官方参考车程、徒步距离和累计爬升比较。">
   <title>进阶线 · 徙野</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
 </head>
-<body>
+<body data-routes="./data/advanced-routes.json" data-weekend="./data/weekend-availability.json">
   <main class="page-shell">
     <nav class="topbar" aria-label="项目导航">
       <a class="brand" href="./" aria-label="徙野首页">
@@ -16,20 +17,128 @@
         <span>徙野 <small>ROUTE LAB</small></span>
       </a>
       <div class="nav-links">
-        <a class="nav-link" href="./">一日入门线</a>
+        <a class="nav-link" href="./">首页</a>
+        <a class="nav-link" href="./beginner.html">一日入门线</a>
         <a class="nav-link" href="./advanced.html" aria-current="page">进阶线</a>
         <a class="nav-link" href="./about.html">关于</a>
         <a class="repo-link" href="https://github.com/JohnQsk/youxiake-hiking-routes">GitHub ↗</a>
       </div>
     </nav>
 
-    <section class="placeholder" aria-labelledby="advanced-title">
-      <div class="placeholder-inner">
-        <span class="placeholder-mark" aria-hidden="true">NEXT</span>
-        <p class="eyebrow">ADVANCED / INTENTIONALLY EMPTY</p>
-        <h1 id="advanced-title">进阶线</h1>
-        <p>这里先留一个位置。后续再补充经过核对的进阶路线，不用虚构内容填满页面，也不只凭距离或爬升定义“进阶”。</p>
-        <a class="primary-link" href="./">返回一日入门线</a>
+    <header class="subpage-hero">
+      <p class="eyebrow">ADVANCED / DAY HIKING</p>
+      <h1>进阶线，<br><em>先把强度看清。</em></h1>
+      <p class="hero-copy">16 条来自游侠客「一日线 · 进阶徒步」分类的候选路线：距离 6–22km，累计爬升 427–1,100m。表格同时标注 11/07–08 的班期状态与价格，并支持只看本周末可报名的路线。</p>
+      <div class="hero-meta" aria-label="进阶数据集摘要">
+        <span><strong id="route-total">16</strong> 条进阶路线</span>
+        <span><strong>2026-11-05</strong> 官方详情核对</span>
+        <span><strong>静态数据</strong> 非实时班期</span>
+      </div>
+    </header>
+
+    <section class="explorer" aria-labelledby="advanced-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-number">ADVANCED / ROUTE EXPLORER</p>
+          <h2 id="advanced-title">进阶线对照表</h2>
+        </div>
+        <p id="result-summary" class="result-summary" aria-live="polite">正在读取进阶路线…</p>
+      </div>
+
+      <div class="controls with-weekend" aria-label="进阶路线筛选与排序">
+        <label class="search-control">
+          <span>搜索路线</span>
+          <input id="search" type="search" placeholder="例如：高阳山、光福小七尖" autocomplete="off">
+        </label>
+        <label>
+          <span>排序方式</span>
+          <select id="sort">
+            <option value="drive-asc">车程：从短到长</option>
+            <option value="drive-desc">车程：从长到短</option>
+            <option value="distance-asc">距离：从短到长</option>
+            <option value="distance-desc">距离：从长到短</option>
+            <option value="ascent-asc">爬升：从低到高</option>
+            <option value="ascent-desc">爬升：从高到低</option>
+            <option value="screenshot">截图原始顺序</option>
+          </select>
+        </label>
+        <label>
+          <span>参考车程上限</span>
+          <select id="max-drive">
+            <option value="">不限</option>
+            <option value="120">≤ 2 小时</option>
+            <option value="150">≤ 2.5 小时</option>
+            <option value="180">≤ 3 小时</option>
+            <option value="210">≤ 3.5 小时</option>
+            <option value="240">≤ 4 小时</option>
+          </select>
+        </label>
+        <label>
+          <span>累计爬升上限</span>
+          <select id="max-ascent">
+            <option value="">不限</option>
+            <option value="500">≤ 500m</option>
+            <option value="700">≤ 700m</option>
+            <option value="900">≤ 900m</option>
+            <option value="1000">≤ 1,000m</option>
+            <option value="1200">≤ 1,200m</option>
+          </select>
+        </label>
+        <label>
+          <span>本周末报名</span>
+          <select id="weekend-filter">
+            <option value="">不限</option>
+            <option value="bookable">可报名</option>
+            <option value="unavailable">不可报名</option>
+          </select>
+        </label>
+        <button id="reset" class="reset-button" type="button">重置</button>
+      </div>
+
+      <p class="control-note">筛选使用当前选中的路线方案；区间数值在表格中按上限记录，官方原文保留在备注里。未公开对应数值的路线会被排除。</p>
+      <p id="weekend-note" class="weekend-note">本周末班期来自 2026-11-05 11:45 的团期快照，不自动刷新；“确定成行”班次仍可报名。</p>
+
+      <div class="table-wrap" tabindex="0" aria-label="可横向滚动的进阶路线表">
+        <table class="weekend-table">
+          <thead>
+            <tr>
+              <th scope="col">路线 / 方案</th>
+              <th scope="col">官方参考车程</th>
+              <th scope="col">徒步距离</th>
+              <th scope="col">累计爬升</th>
+              <th scope="col">本周末 11/07–08</th>
+              <th scope="col">来源</th>
+            </tr>
+          </thead>
+          <tbody id="route-rows"></tbody>
+        </table>
+      </div>
+      <p id="empty-state" class="empty-state" hidden>没有符合条件的路线。试试放宽筛选，或切换多方案路线。</p>
+      <noscript>此对照表需要 JavaScript；也可以直接查看 <a href="./data/advanced-routes.json">advanced-routes.json</a>。</noscript>
+    </section>
+
+    <section class="notes" aria-labelledby="advanced-notes-title">
+      <div>
+        <p class="section-number">ADVANCED / DATA NOTES</p>
+        <h2 id="advanced-notes-title">距离之外，<br>还有路况与经验。</h2>
+      </div>
+      <div class="note-list">
+        <details open>
+          <summary>这些路线为什么算“进阶”？</summary>
+          <p>它们来自 2026-11-05 游侠客 App「一日线 · 进阶徒步」分类，共 16 条。进阶是 App 的分类，不是官方安全评级，也不能只看公里数：高骊山只有约 6km，但需要手脚并用攀爬；光福小七尖则接近 19km 且爬升 950m+。</p>
+        </details>
+        <details>
+          <summary>这些数字从哪里来？</summary>
+          <p>用 youxiake-go 按关键词检索活动 ID，再逐条回到游侠客公开详情页核对「车程」「徒步」字段，保留来源链接、核对日期和必要短摘录。工具只负责定位活动，数值以官方页面为准。</p>
+        </details>
+        <details>
+          <summary>为什么价格和班期要单独快照？</summary>
+          <p>班期、价格和余位都是动态信息，不写进路线数据集。这里另存一份 2026-11-05 11:45 的团期快照，只覆盖本周末 11/07–08，不自动刷新；“确定成行”班次仍可报名。报名人数不展示，因为历史累计报名数不等于当前余位。</p>
+        </details>
+        <details>
+          <summary>区间和“+”号怎么处理？</summary>
+          <p>官方写 5–6km、750–800m 或 950m+ 时，表格按上限记录，并在备注保留原文；这不是精确值。官方没有写明的字段保持 <code>null</code>，不会用 0 或最高海拔代替累计爬升。</p>
+        </details>
       </div>
     </section>
 
@@ -39,11 +148,13 @@
         <p>一个公开、可溯源的个人路线比较实验。</p>
       </div>
       <div class="footer-links">
-        <a href="./about.html">为什么做徙野</a>
-        <a href="https://github.com/vanawaker/youxiake-go">youxiake-go ↗</a>
+        <a href="./">返回首页</a>
+        <a href="./beginner.html">一日入门线</a>
+        <a href="./data/advanced-routes.json">JSON 数据 ↗</a>
+        <a href="https://github.com/vanawaker/youxiake-go">查询工具：youxiake-go ↗</a>
         <a href="https://github.com/JohnQsk/youxiake-hiking-routes">仓库与说明 ↗</a>
       </div>
-      <p class="disclaimer">非游侠客官方项目。实际行程以官方最新页面和出团通知为准。</p>
+      <p class="disclaimer">非游侠客官方项目。路线名称与原始数据归相应权利人所有；不出售数据，不提供报名服务。实际行程以官方最新页面和出团通知为准。</p>
     </footer>
   </main>
 </body>

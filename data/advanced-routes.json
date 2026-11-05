@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "tier": "advanced",
+  "title": "上海出发一日进阶徒步路线",
+  "checked_at": "2026-11-05",
+  "scope": "游侠客 App 一日线「进阶徒步」分类截图中的 16 条上海出发路线；不是游侠客全量路线库。",
+  "source": "游侠客公开活动详情页",
+  "source_method": "youxiake-go 按关键词检索活动 ID，再逐条读取官方详情页核对车程、距离与爬升",
+  "routes": [
+    {
+      "id": "48168",
+      "name": "疾速追山·高阳山｜登嘉兴第一高峰，春赏南北湖",
+      "short_name": "高阳山",
+      "series": "疾速追山",
+      "screenshot_order": 1,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 90, "max_minutes": 90, "text": "单程车程1.5小时"},
+      "hiking_options": [
+        {"key": "default", "label": "大环线", "distance_km": 18, "ascent_m": 700, "note": "官方写今日徒步18km，爬升700m左右"}
+      ],
+      "source_excerpt": "大环线，今日徒步18km，爬升700米左右。",
+      "source_url": "https://www.youxiake.com/lines.html?id=48168",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "36819",
+      "name": "疾速追山·小恐龙 | 走进穹窿山，徒步画龙",
+      "short_name": "小恐龙",
+      "series": "疾速追山",
+      "screenshot_order": 2,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 120, "max_minutes": 120, "text": "2h左右"},
+      "hiking_options": [
+        {"key": "default", "label": "画龙线", "distance_km": 16, "ascent_m": 1000, "note": "路况丰富，野路为主"}
+      ],
+      "source_excerpt": "徒步16km，累计爬升1000m左右，路况丰富，野路为主",
+      "source_url": "https://www.youxiake.com/lines.html?id=36819",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "50459",
+      "name": "山野攀行·南屿山 | 跨溪流爬木梯，远观天池",
+      "short_name": "南屿山",
+      "series": "山野攀行",
+      "screenshot_order": 3,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 210, "max_minutes": 210, "text": "约3.5小时"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 9, "ascent_m": 900, "note": "官方写累计爬升900m+；最高海拔约1025m"}
+      ],
+      "source_excerpt": "累计爬升900m＋左右；最高海拔1025m左右 徒步距离9公里左右",
+      "source_url": "https://www.youxiake.com/lines.html?id=50459",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "20108",
+      "name": "山野攀行·高骊山 | 穿越丛林舞动山脊",
+      "short_name": "高骊山",
+      "series": "山野攀行",
+      "screenshot_order": 4,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 240, "max_minutes": 240, "text": "4h左右"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 6, "ascent_m": 427, "note": "官方写5–6km，表格按6km计；徒步＋攀爬，手脚并用，强度较大"}
+      ],
+      "source_excerpt": "全程约徒步5-6km，累计爬升427米，用时大约4-5小时，徒步＋攀爬，手脚并用，强度较大",
+      "source_url": "https://www.youxiake.com/lines.html?id=20108",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "46983",
+      "name": "野境寻榧·香榧王 | 探稽东古道，寻香榧王",
+      "short_name": "香榧王",
+      "series": "野境寻榧",
+      "screenshot_order": 5,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 210, "max_minutes": 210, "text": "3.5h左右"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 12, "ascent_m": 800, "note": "野外徒步路线，建议带登山杖"}
+      ],
+      "source_excerpt": "徒步约12km,累计爬升800m左右，野外徒步路线，请带登山杖",
+      "source_url": "https://www.youxiake.com/lines.html?id=46983",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "43845",
+      "name": "山野攀行·笔架山 | 野趣攀爬，徒步原始森林",
+      "short_name": "笔架山",
+      "series": "山野攀行",
+      "screenshot_order": 6,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 180, "max_minutes": 180, "text": "3h左右"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 10, "ascent_m": 628, "note": "需攀爬四段铁链，恐高者慎报；最高海拔425m"}
+      ],
+      "source_excerpt": "徒步距离10km，全程爬升约628m，最高海拔425m，以山路、台阶路、山间小道为主。",
+      "source_url": "https://www.youxiake.com/lines.html?id=43845",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "30146",
+      "name": "疾速追山·湘湖群山 | 探先照古刹，穿越湘湖",
+      "short_name": "湘湖群山",
+      "series": "疾速追山",
+      "screenshot_order": 7,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 180, "max_minutes": 180, "text": "3h左右"},
+      "hiking_options": [
+        {"key": "default", "label": "全程穿越", "distance_km": 20, "ascent_m": 1100, "note": "活动亮点写全程约20km、爬升约1100m；台阶较多"}
+      ],
+      "source_excerpt": "全程约20km，耗时6-8h左右……爬升约1100米左右",
+      "source_url": "https://www.youxiake.com/lines.html?id=30146",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "17262",
+      "name": "疾速追山·灵树线 | 苏州灵岩山-大阳山连穿",
+      "short_name": "灵树线",
+      "series": "疾速追山",
+      "screenshot_order": 8,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 150, "max_minutes": 150, "text": "上海-灵岩山，车程约2.5h"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 18, "ascent_m": 850, "note": "地貌丰富，富有挑战性"}
+      ],
+      "source_excerpt": "今日徒步约18km，累计爬升850m，地貌丰富，富有挑战性",
+      "source_url": "https://www.youxiake.com/lines.html?id=17262",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "47966",
+      "name": "疾速浪漫·爱心线 | 一半西湖一半青山",
+      "short_name": "爱心线",
+      "series": "疾速浪漫",
+      "screenshot_order": 9,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 180, "max_minutes": 180, "text": "上海-杭州 约3小时"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 21, "ascent_m": 800, "note": "官方写累计爬升750–800m，表格按800m计"}
+      ],
+      "source_excerpt": "全程21公里，累计爬升750-800米，耗时约5-6小时",
+      "source_url": "https://www.youxiake.com/lines.html?id=47966",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "36930",
+      "name": "疾速追山·虞山 | 超高林荫覆盖率，六上六下",
+      "short_name": "虞山",
+      "series": "疾速追山",
+      "screenshot_order": 10,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 90, "max_minutes": 90, "text": "约1.5h"},
+      "hiking_options": [
+        {"key": "default", "label": "六上六下", "distance_km": 18, "ascent_m": 1100, "note": "最高海拔约270m"}
+      ],
+      "source_excerpt": "虞山线 累计爬升1100m左右；最高海拔270m左右 徒步距离18公里左右",
+      "source_url": "https://www.youxiake.com/lines.html?id=36930",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "50935",
+      "name": "疾速入门·姑苏旺七 | 苏州太湖疾速入门线路",
+      "short_name": "姑苏旺七",
+      "series": "疾速入门",
+      "screenshot_order": 11,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 90, "max_minutes": 120, "text": "1.5-2小时"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 18, "ascent_m": 750, "note": "疾速入门线路，距离仍接近18km"}
+      ],
+      "source_excerpt": "全程约18km，爬升约750m",
+      "source_url": "https://www.youxiake.com/lines.html?id=50935",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "49236",
+      "name": "虞山·雄鹰 | 解锁体验12km雄鹰轨迹",
+      "short_name": "虞山·雄鹰",
+      "series": "虞山",
+      "screenshot_order": 12,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 120, "max_minutes": 120, "text": "约2h"},
+      "hiking_options": [
+        {"key": "default", "label": "雄鹰轨迹", "distance_km": 12, "ascent_m": 700, "note": "官方写徒步约12km，爬升700m左右"}
+      ],
+      "source_excerpt": "徒步距离约12km，爬升700m左右，徒步时间约5h",
+      "source_url": "https://www.youxiake.com/lines.html?id=49236",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "47156",
+      "name": "疾速追山·军嶂大环 | 登顶龙王山，赏太湖",
+      "short_name": "军嶂大环",
+      "series": "疾速追山",
+      "screenshot_order": 13,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 120, "max_minutes": 120, "text": "上海-宝界山林公园，车程约2.0h"},
+      "hiking_options": [
+        {"key": "default", "label": "大环线", "distance_km": 22, "ascent_m": 800, "note": "野路为主"}
+      ],
+      "source_excerpt": "今日徒步22km上下，累计爬升800m，野路为主",
+      "source_url": "https://www.youxiake.com/lines.html?id=47156",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "34921",
+      "name": "富春之巅·杏梅尖 | 龙门飞瀑，登富阳最高峰",
+      "short_name": "杏梅尖",
+      "series": "富春之巅",
+      "screenshot_order": 14,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 240, "max_minutes": 240, "text": "4H"},
+      "hiking_options": [
+        {"key": "default", "label": "默认路线", "distance_km": 13, "ascent_m": 1000, "note": "登富阳最高峰"}
+      ],
+      "source_excerpt": "徒步13KM，累计爬升1000M。",
+      "source_url": "https://www.youxiake.com/lines.html?id=34921",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "54973",
+      "name": "疾速追山·弁山大环 | 穿越南云峰，踏山脊",
+      "short_name": "弁山大环",
+      "series": "疾速追山",
+      "screenshot_order": 15,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 150, "max_minutes": 150, "text": "单程2.5小时左右"},
+      "hiking_options": [
+        {"key": "default", "label": "大环线", "distance_km": 18, "ascent_m": 1000, "note": "官方写爬升1000m+；步道、土路为主"}
+      ],
+      "source_excerpt": "今日徒步18km左右，累计爬升1000m＋，步道、土路为主",
+      "source_url": "https://www.youxiake.com/lines.html?id=54973",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "id": "20343",
+      "name": "疾速追山·光福小七尖 | 登山观湖，穿越光福",
+      "short_name": "光福小七尖",
+      "series": "疾速追山",
+      "screenshot_order": 16,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {"min_minutes": 120, "max_minutes": 120, "text": "上海-光福，车程约2h"},
+      "hiking_options": [
+        {"key": "default", "label": "小七尖", "distance_km": 19, "ascent_m": 950, "note": "官方写爬升950m+；最高海拔234m"}
+      ],
+      "source_excerpt": "今日徒步约19km，累计爬升950+m，最高海拔234m",
+      "source_url": "https://www.youxiake.com/lines.html?id=20343",
+      "checked_at": "2026-11-05"
+    }
+  ]
+}

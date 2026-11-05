@@ -26,6 +26,10 @@ button, select { cursor: pointer; }
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 800; letter-spacing: .08em; }
 .brand small { display: block; margin-top: 2px; color: var(--muted); font-size: 10px; letter-spacing: .18em; }
 .brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--ink); color: var(--lime); font-size: 12px; letter-spacing: 0; }
+.nav-links { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; }
+.nav-link { position: relative; color: var(--muted); font-size: 13px; font-weight: 650; text-decoration: none; }
+.nav-link:hover, .nav-link[aria-current="page"] { color: var(--green); }
+.nav-link[aria-current="page"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -9px; height: 2px; background: var(--green); }
 .repo-link { font-size: 14px; font-weight: 650; text-decoration: none; border-bottom: 1px solid var(--ink); }
 
 .hero { padding: 78px 0 68px; position: relative; overflow: hidden; }
@@ -79,6 +83,34 @@ footer p { margin: 8px 0 0; color: var(--muted); font-size: 12px; line-height: 1
 .footer-links { display: flex; gap: 24px; font-size: 13px; font-weight: 650; }
 .disclaimer { grid-column: 1 / -1; max-width: 900px; }
 
+.subpage-hero { max-width: 850px; padding: 74px 0 48px; }
+.subpage-hero h1 { font-size: clamp(42px, 6vw, 76px); }
+.subpage-hero .hero-copy { margin-bottom: 0; }
+.about-grid { display: grid; grid-template-columns: 1.4fr .8fr; gap: 70px; padding: 20px 0 70px; }
+.prose section { margin-bottom: 38px; }
+.prose h2 { margin-bottom: 15px; font-size: 25px; letter-spacing: -.025em; }
+.prose p, .prose li { color: var(--muted); font-size: 15px; line-height: 1.95; }
+.prose p { margin: 0; }
+.prose ul { margin: 12px 0 0; padding-left: 22px; }
+.prose a { color: var(--green); font-weight: 650; }
+.principle-card { align-self: start; padding: 26px; border-radius: 16px; background: var(--ink); color: white; }
+.principle-card h2 { margin-bottom: 20px; font-size: 22px; }
+.principle-card p { margin: 0 0 18px; color: #d6e2d9; font-size: 13px; line-height: 1.8; }
+.principle-card p:last-child { margin-bottom: 0; }
+.credit-box { display: flex; justify-content: space-between; align-items: center; gap: 30px; padding: 30px; margin-bottom: 70px; border-radius: 16px; background: var(--green-light); }
+.credit-box h2 { margin-bottom: 10px; font-size: 26px; }
+.credit-box p { margin: 0; color: var(--muted); line-height: 1.8; }
+.credit-box a { color: var(--green); font-weight: 750; }
+.credit-box .primary-link { color: white; }
+.credit-box .primary-link:hover { color: white; }
+.placeholder { display: grid; place-items: center; min-height: 540px; padding: 70px 20px; text-align: center; }
+.placeholder-inner { max-width: 620px; }
+.placeholder-mark { display: grid; place-items: center; width: 76px; height: 76px; margin: 0 auto 30px; border: 1px solid var(--green); border-radius: 50%; color: var(--green); font-size: 13px; letter-spacing: .12em; }
+.placeholder h1 { font-size: clamp(48px, 8vw, 88px); }
+.placeholder p { margin: 26px auto 32px; color: var(--muted); line-height: 1.9; }
+.primary-link { display: inline-block; padding: 12px 20px; border-radius: 9px; background: var(--ink); color: white; text-decoration: none; font-size: 14px; font-weight: 700; }
+.primary-link:hover { background: var(--green); }
+
 @media (max-width: 1050px) {
   .controls { grid-template-columns: repeat(2, 1fr); }
   .search-control { grid-column: 1 / -1; }
@@ -86,7 +118,15 @@ footer p { margin: 8px 0 0; color: var(--muted); font-size: 12px; line-height: 1
 }
 @media (max-width: 700px) {
   .page-shell { width: min(100% - 28px, 1320px); }
-  .topbar { padding: 20px 0; }
+  .topbar { padding: 20px 0; flex-direction: column; align-items: flex-start; gap: 20px; }
+  .nav-links { width: 100%; justify-content: flex-start; gap: 14px 20px; }
+  .nav-link { font-size: 12px; }
+  .repo-link { font-size: 12px; }
+  .subpage-hero { padding: 52px 0 35px; }
+  .about-grid { grid-template-columns: 1fr; gap: 20px; padding-bottom: 45px; }
+  .credit-box { display: block; padding: 22px; margin-bottom: 45px; }
+  .credit-box .primary-link { display: inline-block; margin-top: 22px; }
+  .placeholder { min-height: 480px; padding: 55px 8px; }
   .hero { padding: 52px 0 44px; }
   .hero::after { width: 240px; height: 240px; right: -100px; }
   .hero-copy { font-size: 15px; }

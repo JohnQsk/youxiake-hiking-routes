@@ -20,6 +20,12 @@ python -m http.server 8000
 
 打开 `http://127.0.0.1:8000`。请通过 HTTP 访问，不要直接双击 `index.html`，因为浏览器通常不允许 `file://` 页面读取 JSON。
 
+## 页面
+
+- `index.html`：一日线 / 入门线合集与路线对照表
+- `about.html`：为什么做这个实验、数据方法与工具致谢
+- `advanced.html`：有意留空的进阶线合集，等待后续核对后补充
+
 ## 已支持
 
 - 按官方参考车程、徒步距离、累计爬升升降序排列
@@ -67,6 +73,13 @@ node --check app.js
 ```
 
 CSV 使用 UTF-8 with BOM，方便中文 Excel 直接打开；每个路线方案一行。
+
+## 工具与致谢
+
+- 路线与详情来源：[游侠客](https://www.youxiake.com/)
+- Agent 查询思路与后续手动刷新基础：[vanawaker/youxiake-go](https://github.com/vanawaker/youxiake-go)
+
+使用第三方工具时仍需独立核验其字段含义；当前静态路线数据来自逐条官方详情核对。
 
 ## 公开内容说明
 

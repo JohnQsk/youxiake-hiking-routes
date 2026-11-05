@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="为什么设计徙野：让徒步路线比较回到车程、距离、爬升与可核验来源。">
+  <title>为什么做徙野 · 关于这个实验</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="topbar" aria-label="项目导航">
+      <a class="brand" href="./" aria-label="徙野首页">
+        <span class="brand-mark" aria-hidden="true">XY</span>
+        <span>徙野 <small>ROUTE LAB</small></span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="./">一日入门线</a>
+        <a class="nav-link" href="./advanced.html">进阶线</a>
+        <a class="nav-link" href="./about.html" aria-current="page">关于</a>
+        <a class="repo-link" href="https://github.com/JohnQsk/youxiake-hiking-routes">GitHub ↗</a>
+      </div>
+    </nav>
+
+    <header class="subpage-hero">
+      <p class="eyebrow">ABOUT / WHY THIS EXPERIMENT EXISTS</p>
+      <h1>不是路线太少，<br><em>是比较太费劲。</em></h1>
+      <p class="hero-copy">徙野不是另一个旅行内容平台。它只尝试把选路线时真正需要的数字，放到同一个可比较、可回溯的地方。</p>
+    </header>
+
+    <div class="about-grid">
+      <article class="prose">
+        <section>
+          <h2>从一次真实的周末选择开始</h2>
+          <p>我们常通过游侠客参加上海周边的一日徒步。路线很多，但集合点、车程、徒步距离和累计爬升分散在不同详情页里。想回答“哪条更适合这个周末”，往往要反复打开页面、记住数字，再做一次脑内排序。</p>
+        </section>
+        <section>
+          <h2>先整理相对稳定的路线信息</h2>
+          <p>第一版从一张 App 候选截图出发，核对其中 21 条上海一日路线的官方详情。我们把参考车程、徒步距离、累计爬升、路线方案和来源链接整理成 JSON，再生成可排序的网页与 CSV。</p>
+          <p>相比从头抓取全部路线，先由人给出候选范围更准确，也更容易验证。截图是选择入口，官方详情才是数据来源。</p>
+        </section>
+        <section>
+          <h2>动态信息，交给手动触发的 Agent</h2>
+          <p>可报名日期、班期状态、价格和未来可能接入的天气，不适合伪装成静态事实。后续计划由用户手动触发 Agent 调用 <a href="https://github.com/vanawaker/youxiake-go">youxiake-go</a> 获取快照，并明确记录更新时间与查询范围。</p>
+          <p>工具拿不到的字段，可以再按需读取单个官方页面。提取失败就保留未知，不根据路线名称、图片或“新手友好”等宣传词猜数字。</p>
+        </section>
+        <section>
+          <h2>为什么保留来源和“未公开”？</h2>
+          <p>因为可核验比看起来很完整更重要。每条路线都可以回到官方详情；缺失字段不是 0，最高海拔不是累计爬升，某段接驳距离也不是全程距离。多季节、多走法、多接驳方案需要分别表达。</p>
+        </section>
+      </article>
+
+      <aside class="principle-card" aria-label="项目原则">
+        <h2>四条小原则</h2>
+        <p><strong>01 · 可比较</strong><br>让关键数字在同一张表里，而不是藏在多篇文案中。</p>
+        <p><strong>02 · 可溯源</strong><br>保留官方链接、核对日期和必要原文证据。</p>
+        <p><strong>03 · 不伪装实时</strong><br>静态与动态分离；一次手动刷新就诚实地显示一次更新时间。</p>
+        <p><strong>04 · 不代替判断</strong><br>排序不是安全评级。天气、路况、体能和官方通知仍然重要。</p>
+      </aside>
+    </div>
+
+    <section class="credit-box" aria-labelledby="credit-title">
+      <div>
+        <p class="section-number">TOOLS & CREDIT</p>
+        <h2 id="credit-title">吃水不忘挖井人。</h2>
+        <p>感谢游侠客提供路线与公开详情，也感谢 <a href="https://github.com/vanawaker/youxiake-go">vanawaker/youxiake-go</a> 开源 Agent Skill 与 CLI 带来的查询思路和后续动态刷新基础。</p>
+      </div>
+      <a class="primary-link" href="https://github.com/vanawaker/youxiake-go">访问 youxiake-go ↗</a>
+    </section>
+
+    <footer>
+      <div>
+        <strong>徙野 / ROUTE LAB</strong>
+        <p>一个公开、可溯源的个人路线比较实验。</p>
+      </div>
+      <div class="footer-links">
+        <a href="./">查看入门路线</a>
+        <a href="./data/routes.json">JSON 数据 ↗</a>
+        <a href="https://github.com/JohnQsk/youxiake-hiking-routes">仓库与说明 ↗</a>
+      </div>
+      <p class="disclaimer">非游侠客官方项目。路线名称与原始数据归相应权利人所有；不出售数据，不提供报名服务。实际行程以官方最新页面和出团通知为准。</p>
+    </footer>
+  </main>
+</body>
+</html>

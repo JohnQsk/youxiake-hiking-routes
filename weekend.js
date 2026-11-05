@@ -71,7 +71,7 @@ function renderPreview(data) {
 
 async function loadPreview() {
   try {
-    const response = await fetch("./data/weekend-preview.json");
+    const response = await fetch("./data/weekend-preview.json", { cache: "no-cache" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     renderPreview(data);

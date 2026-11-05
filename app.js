@@ -191,7 +191,7 @@ function render() {
       metricCell(option.ascent_m, "m"),
     );
     if (weekendUrl) row.append(weekendCell(route));
-    if (state.weather.size) row.append(weatherCell(route));
+    row.append(weatherCell(route));
     const source = node("td");
     const link = node("a", "source-link", "官方详情 ↗");
     link.href = route.source_url;
@@ -215,7 +215,7 @@ function render() {
 async function loadWeekend() {
   if (!weekendUrl) return;
   try {
-    const response = await fetch(weekendUrl);
+    const response = await fetch(weekendUrl, { cache: "no-cache" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     state.weekend = new Map(Object.entries(data.routes || {}));
@@ -232,7 +232,7 @@ async function loadWeekend() {
 
 async function load() {
   try {
-    const response = await fetch(routesUrl);
+    const response = await fetch(routesUrl, { cache: "no-cache" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     state.routes = data.routes;
@@ -247,7 +247,7 @@ async function load() {
     ui.rows.replaceChildren();
     const row = node("tr");
     const cell = node("td", "empty-state", `无法加载 ${routesUrl}：${error.message}`);
-    cell.colSpan = 5 + (weekendUrl ? 1 : 0) + (state.weather.size ? 1 : 0);
+    cell.colSpan = document.querySelectorAll("thead th").length || 5;
     row.append(cell);
     ui.rows.append(row);
   }

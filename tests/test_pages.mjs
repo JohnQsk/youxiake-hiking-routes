@@ -17,7 +17,7 @@ for (const [key, filename] of Object.entries(pages)) {
   );
 
   for (const match of html[key].matchAll(/(?:href|src)="\.\/([^"]*)"/g)) {
-    const relative = match[1];
+    const relative = match[1].split(/[?#]/)[0];
     if (relative) await access(fileURLToPath(new URL(relative, root)));
   }
 }

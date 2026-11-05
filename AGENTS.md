@@ -63,7 +63,7 @@ node --check weekend.js
 | `routes.csv` | 由入门数据集生成的 CSV，需与 `data/routes.json` 同步提交 |
 | `scripts/export_csv.py` | CSV 导出脚本 |
 | `tests/*.mjs` | 数据、页面、周末快照、天气映射的断言测试 |
-| `CHANGELOG.md` | 版本记录；当前发布版本为 v1.0 |
+| `CHANGELOG.md` | 版本记录；当前发布版本为 v1.0.1 |
 | `.nojekyll` | GitHub Pages 配置，勿删 |
 
 ## 数据规则（最重要）

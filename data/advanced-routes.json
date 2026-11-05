@@ -6,6 +6,30 @@
   "scope": "游侠客 App 一日线「进阶徒步」分类截图中的 16 条上海出发路线；不是游侠客全量路线库。",
   "source": "游侠客公开活动详情页",
   "source_method": "youxiake-go 按关键词检索活动 ID，再逐条读取官方详情页核对车程、距离与爬升",
+  "weather": {
+    "date": "2026-11-07",
+    "weekday": "周六",
+    "source": "中国天气网",
+    "note": "城市/区县 7 天预报，非徒步起点精确预报",
+    "locations": {
+      "48168": {"name": "海盐", "url": "https://www.weather.com.cn/weather/101210306.shtml"},
+      "36819": {"name": "苏州", "url": "https://www.weather.com.cn/weather/101190401.shtml"},
+      "50459": {"name": "安吉", "url": "https://www.weather.com.cn/weather/101210203.shtml"},
+      "20108": {"name": "句容", "url": "https://www.weather.com.cn/weather/101190304.shtml"},
+      "46983": {"name": "柯桥", "url": "https://www.weather.com.cn/weather/101210506.shtml"},
+      "43845": {"name": "奉化", "url": "https://www.weather.com.cn/weather/101210405.shtml"},
+      "30146": {"name": "萧山", "url": "https://www.weather.com.cn/weather/101210102.shtml"},
+      "17262": {"name": "苏州", "url": "https://www.weather.com.cn/weather/101190401.shtml"},
+      "47966": {"name": "杭州", "url": "https://www.weather.com.cn/weather/101210101.shtml"},
+      "36930": {"name": "常熟", "url": "https://www.weather.com.cn/weather/101190402.shtml"},
+      "50935": {"name": "苏州", "url": "https://www.weather.com.cn/weather/101190401.shtml"},
+      "49236": {"name": "常熟", "url": "https://www.weather.com.cn/weather/101190402.shtml"},
+      "47156": {"name": "无锡", "url": "https://www.weather.com.cn/weather/101190201.shtml"},
+      "34921": {"name": "富阳", "url": "https://www.weather.com.cn/weather/101210108.shtml"},
+      "54973": {"name": "湖州", "url": "https://www.weather.com.cn/weather/101210201.shtml"},
+      "20343": {"name": "苏州", "url": "https://www.weather.com.cn/weather/101190401.shtml"}
+    }
+  },
   "routes": [
     {
       "id": "48168",

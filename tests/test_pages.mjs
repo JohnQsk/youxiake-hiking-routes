@@ -38,6 +38,7 @@ assert.ok(html.beginner.includes('data-weekend="./data/weekend-availability.json
 assert.ok(html.beginner.includes('id="weekend-filter"'));
 assert.ok(html.beginner.includes('id="weekend-note"'));
 assert.ok(html.beginner.includes("本周末 11/07–08"));
+assert.ok(html.beginner.includes("周六天气"));
 assert.ok(html.beginner.includes("一日入门种子路线"));
 assert.ok(html.beginner.includes('id="route-rows"'));
 assert.ok(!html.beginner.includes("先看清路线"), "Beginner table page should not keep the oversized slogan");
@@ -46,6 +47,7 @@ assert.ok(html.advanced.includes('data-weekend="./data/weekend-availability.json
 assert.ok(html.advanced.includes('id="weekend-filter"'));
 assert.ok(html.advanced.includes('id="weekend-note"'));
 assert.ok(html.advanced.includes("本周末 11/07–08"));
+assert.ok(html.advanced.includes("周六天气"));
 assert.ok(html.advanced.includes('id="route-rows"'));
 assert.ok(html.advanced.includes("进阶线对照表"));
 assert.ok(!html.advanced.includes("先把强度看清"), "Advanced table page should not keep the oversized slogan");

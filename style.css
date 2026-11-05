@@ -110,7 +110,7 @@ input:focus, select:focus, button:focus-visible, .table-wrap:focus-visible { bor
 
 .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; outline: none; }
 table { width: 100%; min-width: 880px; border-collapse: collapse; text-align: left; }
-table.weekend-table { min-width: 1000px; }
+table.weekend-table { min-width: 1100px; }
 th { padding: 14px 18px; background: #f0f3ed; color: var(--muted); font-size: 11px; letter-spacing: .06em; font-weight: 750; }
 td { padding: 18px; border-top: 1px solid #e8ebe5; vertical-align: middle; font-size: 14px; }
 tbody tr { transition: background .15s ease; }
@@ -134,6 +134,10 @@ tbody tr:hover { background: #fafbf7; }
 .weekend-status.is-unavailable { background: #f1e7d7; color: #8a5a2b; }
 .weekend-price { color: var(--muted); font-size: 11px; }
 .weekend-none { color: #8a948d; font-size: 12px; white-space: nowrap; }
+.weather-cell { min-width: 96px; }
+.weather-location { display: block; margin-bottom: 4px; color: var(--muted); font-size: 12px; }
+.weather-link { color: var(--green); font-size: 12px; font-weight: 700; white-space: nowrap; }
+.weather-none { color: #8a948d; font-size: 12px; }
 .empty-state { padding: 38px 20px; text-align: center; color: var(--muted); }
 
 .notes { display: grid; grid-template-columns: .9fr 1.4fr; gap: 70px; padding: 90px 4px; }

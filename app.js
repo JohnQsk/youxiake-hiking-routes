@@ -9,6 +9,8 @@ const state = {
   variants: new Map(),
   weekend: new Map(),
   weekendLoaded: false,
+  weather: new Map(),
+  weatherDate: "",
 };
 
 const ui = {
@@ -155,6 +157,25 @@ function weekendCell(route) {
   return cell;
 }
 
+function weatherCell(route) {
+  const cell = node("td", "weather-cell");
+  const weather = state.weather.get(route.id);
+  if (!weather) {
+    cell.append(node("span", "weather-none", "未配置"));
+    return cell;
+  }
+
+  const date = state.weatherDate || "2026-11-07";
+  const shortDate = date.slice(5).replace("-", "/");
+  const link = node("a", "weather-link", `${shortDate} 周六 ↗`);
+  link.href = weather.url;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.title = `${weather.name} · ${date}（周六）天气预报 · 中国天气网`;
+  cell.append(node("span", "weather-location", weather.name), link);
+  return cell;
+}
+
 function render() {
   const routes = visibleRoutes();
   ui.rows.replaceChildren();
@@ -170,6 +191,7 @@ function render() {
       metricCell(option.ascent_m, "m"),
     );
     if (weekendUrl) row.append(weekendCell(route));
+    if (state.weather.size) row.append(weatherCell(route));
     const source = node("td");
     const link = node("a", "source-link", "官方详情 ↗");
     link.href = route.source_url;
@@ -200,7 +222,7 @@ async function loadWeekend() {
     state.weekendLoaded = true;
     if (ui.weekendNote && data.checked_at) {
       const stamp = data.checked_at.slice(0, 16).replace("T", " ");
-      ui.weekendNote.textContent = `本周末班期来自 ${stamp} 的团期快照，不自动刷新；“确定成行”班次仍可报名。`;
+      ui.weekendNote.textContent = `本周末班期来自 ${stamp} 的团期快照，不自动刷新；“确定成行”班次仍可报名。天气链接为中国天气网城市/区县 7 天预报，非徒步起点精确预报。`;
     }
   } catch (error) {
     state.weekendLoaded = false;
@@ -215,6 +237,8 @@ async function load() {
     const data = await response.json();
     state.routes = data.routes;
     state.checkedAt = data.checked_at;
+    state.weather = new Map(Object.entries(data.weather?.locations || {}));
+    state.weatherDate = data.weather?.date || "";
     ui.total.textContent = String(state.routes.length);
     await loadWeekend();
     render();
@@ -223,7 +247,7 @@ async function load() {
     ui.rows.replaceChildren();
     const row = node("tr");
     const cell = node("td", "empty-state", `无法加载 ${routesUrl}：${error.message}`);
-    cell.colSpan = weekendUrl ? 6 : 5;
+    cell.colSpan = 5 + (weekendUrl ? 1 : 0) + (state.weather.size ? 1 : 0);
     row.append(cell);
     ui.rows.append(row);
   }

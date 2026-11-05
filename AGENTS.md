@@ -34,6 +34,7 @@ python scripts/export_csv.py
 node tests/test_data.mjs
 node tests/test_advanced_data.mjs
 node tests/test_weekend_availability.mjs
+node tests/test_weather.mjs
 node tests/test_pages.mjs
 node tests/test_weekend.mjs
 
@@ -55,13 +56,14 @@ node --check weekend.js
 | `app.js` | 入门页与进阶页共用的路线表：加载、筛选、排序、多方案切换；数据集由 `<body data-routes>` 指定，周末快照由 `<body data-weekend>` 指定 |
 | `weekend.js` | 首页单路线周末预览的渲染 |
 | `style.css` | 全站样式；设计变量在 `:root`，断点为 1050px / 700px，并处理 `prefers-reduced-motion` |
-| `data/routes.json` | 入门路线主数据集（21 条） |
-| `data/advanced-routes.json` | 进阶路线数据集（16 条，另有 `tier` 与 `series`） |
+| `data/routes.json` | 入门路线主数据集（21 条，含固定地点天气链接） |
+| `data/advanced-routes.json` | 进阶路线数据集（16 条，另有 `tier`、`series` 与固定地点天气链接） |
 | `data/weekend-availability.json` | 全站 37 条路线 11/07–08 的手动团期与价格快照 |
 | `data/weekend-preview.json` | 大树王国（56151）最近周末的手动快照 |
 | `routes.csv` | 由入门数据集生成的 CSV，需与 `data/routes.json` 同步提交 |
 | `scripts/export_csv.py` | CSV 导出脚本 |
-| `tests/*.mjs` | 数据、页面、周末快照的断言测试 |
+| `tests/*.mjs` | 数据、页面、周末快照、天气映射的断言测试 |
+| `CHANGELOG.md` | 版本记录；当前发布版本为 v1.0 |
 | `.nojekyll` | GitHub Pages 配置，勿删 |
 
 ## 数据规则（最重要）
@@ -87,6 +89,12 @@ node --check weekend.js
 - 官方写区间或“+”号时（5–6km、750–800m、950m+），`distance_km` / `ascent_m` 按上限记录，并在 `note` 保留原文；不要删掉备注把区间伪装成精确值。
 - 活动 ID 可以用 youxiake-go 检索，但车程、距离、爬升必须逐条回到官方详情页核对；工具结果不能直接当数据。
 - `advanced.html` 必须保留 `data-routes="./data/advanced-routes.json"`、`#route-rows` 和表格说明，不得退回占位页。
+
+两份路线数据都有顶层 `weather` 块：
+
+- `date` 为 `2026-11-07`、`weekday` 为 `周六`、`source` 为 `中国天气网`，`note` 必须说明是城市/区县 7 天预报、非徒步起点精确预报。
+- `locations` 必须覆盖该数据集全部活动 ID，每个值含非空 `name` 和 `https://www.weather.com.cn/weather/<code>.shtml` 链接。
+- 表格按固定地点生成“11/07 周六”天气链接；不要在页面运行时请求天气接口，也不要声称链接是徒步起点精确预报。
 
 新增路线属于范围变更，会牵动 README、入门页 `21` / 进阶页 `16` 的计数、对应测试和 CSV。除非用户明确要求，不要扩充数据集；优先修正或核对现有条目。
 
@@ -121,7 +129,8 @@ node --check weekend.js
 - `advanced.html` 必须保留真实对照表：`data-routes="./data/advanced-routes.json"`、`data-weekend="./data/weekend-availability.json"`、`#route-rows`、`#weekend-filter`、`#weekend-note`、进阶说明和 `app.js` 引用；不要改回占位页。
 - `index.html` 只做首页：保留 `weekend-preview-content`、`./weekend.js`、“天气只查询可报名或确定成行的日期”和两个路线页入口；不要把路线表搬回首页。
 - `beginner.html` 必须保留 `data-routes="./data/routes.json"`、`data-weekend="./data/weekend-availability.json"`、`#route-rows`、`#weekend-filter`、`#weekend-note` 和“本周末 11/07–08”表头。
-- 入门页与进阶页都必须保留周末班期列；任一页改回 5 列表格都会失去报名筛选。
+- 入门页与进阶页都必须保留周末班期列和“周六天气”列；任一页改回 5 列表格都会失去报名筛选与天气链接。
+- 天气列使用固定地点映射，链接日期为 11/07 周六；不要改成实时天气请求，也不要把城市/区县预报说成徒步起点预报。
 - 入门页写死的 `21`、进阶页写死的 `16`、核对日期和 meta description，在数据变更时必须一起改。
 - 不要删除 footer 里的非官方声明、数据来源、致谢或 MIT 许可信息。
 
@@ -130,7 +139,7 @@ JavaScript 约定：
 - 两个入口都使用 `"use strict"`，保持无依赖、可读的普通函数风格。
 - 用 `document.createElement` / `textContent` 构建 DOM，**不要用 `innerHTML` 拼接数据**。
 - 缺失值统一走 `null` 分支（显示“未公开”、排序置底），不要用 `0` 或空字符串兜底。
-- `app.js` 被入门页和进阶页共用，通过 `<body data-routes>` 选择 JSON；两页都用 `<body data-weekend>` 加载同一份班期快照。没有 `data-weekend` 的页面必须保持 5 列表格，不得出现空的周末列。`weekend.js` 只负责首页单路线卡片。
+- `app.js` 被入门页和进阶页共用，通过 `<body data-routes>` 选择 JSON；两页都用 `<body data-weekend>` 加载同一份班期快照。没有对应数据的列不要渲染成空列：基础 5 列之外，周末列由 `data-weekend` 决定，天气列由数据集 `weather` 块决定。`weekend.js` 只负责首页单路线卡片。
 - 班期筛选只认 `status_code` 1/3 为可报名；数据未加载时不要误判为“不可报名”。
 - 不引入全局状态管理、虚拟 DOM 或第三方工具库。
 
@@ -145,6 +154,7 @@ CSS 约定：
 - 数据改动：`python scripts/export_csv.py` + `node tests/test_data.mjs`，并检查 `routes.csv` diff 合理。
 - 进阶数据改动：`node tests/test_advanced_data.mjs`，确认 16 条、ID 不重叠、区间按上限并保留备注。
 - 全站周末班期改动：`node tests/test_weekend_availability.mjs`，确认 37 个 ID 全覆盖、入门 8 条/进阶 5 条可报名、24 条无班期的口径，并更新 `checked_at`。
+- 天气映射改动：`node tests/test_weather.mjs`，确认两份数据都覆盖全部路线、日期为 11/07 周六、链接指向中国天气网城市/区县页。
 - 页面改动：`node tests/test_pages.mjs`；涉及入门页或进阶页数字时手动核对计数与日期。
 - 周末快照改动：`node tests/test_weekend.mjs`，确认天气只出现在可报名/确定成行日期。
 - JS 改动：`node --check app.js`、`node --check weekend.js`，并确认入门页与进阶页都能加载各自的数据集。

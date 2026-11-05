@@ -2,6 +2,8 @@
 
 一个前期公开实验：把上海出发的一日徒步路线整理成可溯源的数据，并按**参考车程、徒步距离、累计爬升**比较。
 
+当前版本：**v1.0**（2026-11-05） · [更新记录](CHANGELOG.md)
+
 - 静态网站：无需框架、无需后端、无需外部前端资源
 - 种子数据：21 条入门路线 + 16 条进阶路线，来自游侠客 App 截图
 - 进阶来源：App「一日线 · 进阶徒步」分类；活动 ID 用 youxiake-go 检索，数值再逐条回到官方详情页核对
@@ -60,6 +62,7 @@ python -m http.server 8000
 - 进阶页显示官方系列标签，并说明进阶不是官方难度评级
 - 入门线与进阶线的表格都标注本周末 11/07–08 的班期状态与价格
 - 两页共用同一份快照，并可按“可报名 / 不可报名”筛选
+- 每条路线提供中国天气网城市/区县 7 天预报链接，日期按 11/07 周六查看
 - 缺失值显示“未公开”，排序置底，不作为 0
 - 入门 JSON 主数据及每方案一行的 CSV 导出；进阶数据只提供 JSON
 
@@ -73,7 +76,8 @@ python -m http.server 8000
 - 官方写区间或“+”号时，表格按上限记录并在备注保留原文，不把它说成精确值。
 - 多方案、多季节和接驳条件使用 `hiking_options` 表达，不强行合并成唯一数值。
 - 未知字段为 `null`，不会用最高海拔、下降或某段接驳距离冒充总量。
-- 班期、价格、天气默认不写进路线数据集；入门线与进阶页共用一份 11/07–08 的手动团期快照，明确记录抓取时间，不会自动刷新。
+- 班期、价格和预报数值默认不写进路线数据集；入门线与进阶页共用一份 11/07–08 的手动团期快照，明确记录抓取时间，不会自动刷新。
+- 天气链接指向中国天气网的城市/区县 7 天预报，不是徒步起点精确预报；日期按 11/07 周六，打开后在该页查看当天。
 - 实际路线和安排以官方最新页面及出团通知为准。
 
 ## 数据结构
@@ -81,6 +85,8 @@ python -m http.server 8000
 `data/routes.json` 顶层包含 `schema_version`、`checked_at`、`scope` 和 `routes`。
 
 `data/advanced-routes.json` 沿用相同结构，另有 `tier: "advanced"` 和每条路线的 `series`（官方系列标签）。两页复用同一个表格脚本，通过 `<body data-routes>` 指定要加载的数据集。
+
+两份路线数据都有顶层 `weather` 块：`date` 为 `2026-11-07`、`weekday` 为 `周六`，`locations` 按活动 ID 保存固定地点的 `name` 和中国天气网 `url`。表格据此生成“11/07 周六天气”链接，不请求实时天气接口。
 
 `data/weekend-availability.json` 按活动 ID 保存全站 37 条路线本周末两天的 `status_code`、`status_label` 和 `price_cny`；没有班期时用空数组表示，不会把“无班期”写成 0。入门线与进阶页都通过 `<body data-weekend>` 加载这份快照。
 
@@ -106,6 +112,7 @@ python scripts/export_csv.py
 node tests/test_data.mjs
 node tests/test_advanced_data.mjs
 node tests/test_weekend_availability.mjs
+node tests/test_weather.mjs
 node tests/test_pages.mjs
 node tests/test_weekend.mjs
 node --check app.js
@@ -116,6 +123,7 @@ CSV 使用 UTF-8 with BOM，方便中文 Excel 直接打开；每个路线方案
 ## 工具与致谢
 
 - 路线与详情来源：[游侠客](https://www.youxiake.com/)
+- 天气链接来源：[中国天气网](https://www.weather.com.cn/)
 - 活动检索与后续手动刷新工具：[vanawaker/youxiake-go](https://github.com/vanawaker/youxiake-go)
 
 进阶线的活动 ID 用 youxiake-go 按关键词检索，再逐条回到官方详情页核对车程、距离与爬升；本周末班期用它的团期查询（`--ids`）抓取。使用第三方工具时仍需独立核验其字段含义；当前静态路线数据来自逐条官方详情核对。

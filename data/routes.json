@@ -4,6 +4,35 @@
   "checked_at": "2026-11-05",
   "scope": "Shaoke 提供的游侠客 App 截图中的 21 条上海出发一日游；不是游侠客全量路线库。",
   "source": "游侠客公开活动详情页",
+  "weather": {
+    "date": "2026-11-07",
+    "weekday": "周六",
+    "source": "中国天气网",
+    "note": "城市/区县 7 天预报，非徒步起点精确预报",
+    "locations": {
+      "55996": {"name": "新昌", "url": "https://www.weather.com.cn/weather/101210504.shtml"},
+      "56151": {"name": "临安", "url": "https://www.weather.com.cn/weather/101210107.shtml"},
+      "54485": {"name": "上虞", "url": "https://www.weather.com.cn/weather/101210503.shtml"},
+      "27926": {"name": "长兴", "url": "https://www.weather.com.cn/weather/101210202.shtml"},
+      "20005": {"name": "德清", "url": "https://www.weather.com.cn/weather/101210204.shtml"},
+      "55711": {"name": "嵊州", "url": "https://www.weather.com.cn/weather/101210505.shtml"},
+      "20380": {"name": "绍兴", "url": "https://www.weather.com.cn/weather/101210507.shtml"},
+      "49144": {"name": "诸暨", "url": "https://www.weather.com.cn/weather/101210502.shtml"},
+      "18673": {"name": "杭州", "url": "https://www.weather.com.cn/weather/101210101.shtml"},
+      "56054": {"name": "柯桥", "url": "https://www.weather.com.cn/weather/101210506.shtml"},
+      "48878": {"name": "北仑", "url": "https://www.weather.com.cn/weather/101210410.shtml"},
+      "56318": {"name": "苏州", "url": "https://www.weather.com.cn/weather/101190401.shtml"},
+      "47990": {"name": "宜兴", "url": "https://www.weather.com.cn/weather/101190203.shtml"},
+      "30131": {"name": "苏州", "url": "https://www.weather.com.cn/weather/101190401.shtml"},
+      "38628": {"name": "余杭", "url": "https://www.weather.com.cn/weather/101210106.shtml"},
+      "55495": {"name": "杭州", "url": "https://www.weather.com.cn/weather/101210101.shtml"},
+      "51688": {"name": "宁波", "url": "https://www.weather.com.cn/weather/101210401.shtml"},
+      "54856": {"name": "湖州", "url": "https://www.weather.com.cn/weather/101210201.shtml"},
+      "42452": {"name": "慈溪", "url": "https://www.weather.com.cn/weather/101210403.shtml"},
+      "53158": {"name": "慈溪", "url": "https://www.weather.com.cn/weather/101210403.shtml"},
+      "41796": {"name": "慈溪", "url": "https://www.weather.com.cn/weather/101210403.shtml"}
+    }
+  },
   "routes": [
     {
       "id": "55996",

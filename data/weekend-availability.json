@@ -1,32 +1,42 @@
 {
   "schema_version": 1,
   "kind": "nearest_weekend_availability",
-  "checked_at": "2026-11-05T11:45:25+08:00",
+  "checked_at": "2026-11-26T09:15:37+08:00",
   "weekend": {
     "label": "本周末",
-    "start": "2026-11-07",
-    "end": "2026-11-08"
+    "start": "2026-11-28",
+    "end": "2026-11-29"
   },
   "complete": true,
   "scope": "入门 21 条与进阶 16 条，共 37 条路线的本周末班期快照",
-  "source_method": "youxiake-go 团期查询（--ids）；status 1=可报名，3=确定成行，2=不可报名（暂满/受限）",
+  "source_method": "youxiake-go 团期查询（--ids）；status 1=可报名，3=确定成行，2=不可报名（暂满/受限）。status 4 经 2026-11-26 官方页面人工核实（54485/50459/30146/47156）：日历仅显示价格、无“可报名/成行/暂满”标注，页面语义不明，标“待确认”，以官方页面实时显示为准。",
   "routes": {
     "55996": {
-      "days": []
+      "days": [
+        {
+          "date": "2026-11-28",
+          "weekday": "周六",
+          "status_code": 3,
+          "status": "confirmed",
+          "status_label": "确定成行",
+          "price_cny": 188,
+          "remark": ""
+        }
+      ]
     },
     "56151": {
       "days": [
         {
-          "date": "2026-11-07",
+          "date": "2026-11-28",
           "weekday": "周六",
-          "status_code": 2,
-          "status": "full",
-          "status_label": "暂满",
+          "status_code": 3,
+          "status": "confirmed",
+          "status_label": "确定成行",
           "price_cny": 185,
           "remark": "赏秋佳期🍁"
         },
         {
-          "date": "2026-11-08",
+          "date": "2026-11-29",
           "weekday": "周日",
           "status_code": 1,
           "status": "available",
@@ -39,16 +49,29 @@
     "54485": {
       "days": [
         {
-          "date": "2026-11-07",
+          "date": "2026-11-28",
           "weekday": "周六",
           "status_code": 3,
           "status": "confirmed",
           "status_label": "确定成行",
           "price_cny": 185,
-          "remark": ""
+          "remark": "水杉观赏期"
         },
         {
-          "date": "2026-11-08",
+          "date": "2026-11-29",
+          "weekday": "周日",
+          "status_code": 4,
+          "status": "unknown",
+          "status_label": "待确认",
+          "price_cny": 185,
+          "remark": "水杉观赏期"
+        }
+      ]
+    },
+    "27926": {
+      "days": [
+        {
+          "date": "2026-11-29",
           "weekday": "周日",
           "status_code": 1,
           "status": "available",
@@ -58,11 +81,27 @@
         }
       ]
     },
-    "27926": {
-      "days": []
-    },
     "20005": {
-      "days": []
+      "days": [
+        {
+          "date": "2026-11-28",
+          "weekday": "周六",
+          "status_code": 2,
+          "status": "full",
+          "status_label": "暂满",
+          "price_cny": 235,
+          "remark": ""
+        },
+        {
+          "date": "2026-11-29",
+          "weekday": "周日",
+          "status_code": 3,
+          "status": "confirmed",
+          "status_label": "确定成行",
+          "price_cny": 235,
+          "remark": ""
+        }
+      ]
     },
     "55711": {
       "days": []
@@ -73,7 +112,7 @@
     "49144": {
       "days": [
         {
-          "date": "2026-11-07",
+          "date": "2026-11-28",
           "weekday": "周六",
           "status_code": 3,
           "status": "confirmed",
@@ -82,11 +121,11 @@
           "remark": ""
         },
         {
-          "date": "2026-11-08",
+          "date": "2026-11-29",
           "weekday": "周日",
-          "status_code": 3,
-          "status": "confirmed",
-          "status_label": "确定成行",
+          "status_code": 1,
+          "status": "available",
+          "status_label": "可报名",
           "price_cny": 185,
           "remark": ""
         }
@@ -95,11 +134,20 @@
     "18673": {
       "days": [
         {
-          "date": "2026-11-07",
+          "date": "2026-11-28",
           "weekday": "周六",
           "status_code": 3,
           "status": "confirmed",
           "status_label": "确定成行",
+          "price_cny": 185,
+          "remark": ""
+        },
+        {
+          "date": "2026-11-29",
+          "weekday": "周日",
+          "status_code": 1,
+          "status": "available",
+          "status_label": "可报名",
           "price_cny": 185,
           "remark": ""
         }
@@ -108,7 +156,16 @@
     "56054": {
       "days": [
         {
-          "date": "2026-11-08",
+          "date": "2026-11-28",
+          "weekday": "周六",
+          "status_code": 3,
+          "status": "confirmed",
+          "status_label": "确定成行",
+          "price_cny": 185,
+          "remark": ""
+        },
+        {
+          "date": "2026-11-29",
           "weekday": "周日",
           "status_code": 1,
           "status": "available",
@@ -119,12 +176,22 @@
       ]
     },
     "48878": {
-      "days": []
+      "days": [
+        {
+          "date": "2026-11-29",
+          "weekday": "周日",
+          "status_code": 1,
+          "status": "available",
+          "status_label": "可报名",
+          "price_cny": 190,
+          "remark": ""
+        }
+      ]
     },
     "56318": {
       "days": [
         {
-          "date": "2026-11-08",
+          "date": "2026-11-29",
           "weekday": "周日",
           "status_code": 1,
           "status": "available",
@@ -135,17 +202,7 @@
       ]
     },
     "47990": {
-      "days": [
-        {
-          "date": "2026-11-08",
-          "weekday": "周日",
-          "status_code": 1,
-          "status": "available",
-          "status_label": "可报名",
-          "price_cny": 185,
-          "remark": ""
-        }
-      ]
+      "days": []
     },
     "30131": {
       "days": []
@@ -160,17 +217,7 @@
       "days": []
     },
     "54856": {
-      "days": [
-        {
-          "date": "2026-11-08",
-          "weekday": "周日",
-          "status_code": 1,
-          "status": "available",
-          "status_label": "可报名",
-          "price_cny": 185,
-          "remark": ""
-        }
-      ]
+      "days": []
     },
     "42452": {
       "days": []
@@ -184,7 +231,7 @@
     "48168": {
       "days": [
         {
-          "date": "2026-11-07",
+          "date": "2026-11-28",
           "weekday": "周六",
           "status_code": 3,
           "status": "confirmed",
@@ -193,7 +240,49 @@
           "remark": ""
         },
         {
-          "date": "2026-11-08",
+          "date": "2026-11-29",
+          "weekday": "周日",
+          "status_code": 3,
+          "status": "confirmed",
+          "status_label": "确定成行",
+          "price_cny": 185,
+          "remark": ""
+        }
+      ]
+    },
+    "36819": {
+      "days": [
+        {
+          "date": "2026-11-29",
+          "weekday": "周日",
+          "status_code": 1,
+          "status": "available",
+          "status_label": "可报名",
+          "price_cny": 190,
+          "remark": ""
+        }
+      ]
+    },
+    "50459": {
+      "days": [
+        {
+          "date": "2026-11-28",
+          "weekday": "周六",
+          "status_code": 4,
+          "status": "unknown",
+          "status_label": "待确认",
+          "price_cny": 190,
+          "remark": ""
+        }
+      ]
+    },
+    "20108": {
+      "days": []
+    },
+    "46983": {
+      "days": [
+        {
+          "date": "2026-11-29",
           "weekday": "周日",
           "status_code": 1,
           "status": "available",
@@ -203,33 +292,21 @@
         }
       ]
     },
-    "36819": {
-      "days": []
-    },
-    "50459": {
-      "days": []
-    },
-    "20108": {
-      "days": []
-    },
-    "46983": {
-      "days": []
-    },
     "43845": {
+      "days": []
+    },
+    "30146": {
       "days": [
         {
-          "date": "2026-11-08",
+          "date": "2026-11-29",
           "weekday": "周日",
-          "status_code": 1,
-          "status": "available",
-          "status_label": "可报名",
-          "price_cny": 195,
+          "status_code": 4,
+          "status": "unknown",
+          "status_label": "待确认",
+          "price_cny": 190,
           "remark": ""
         }
       ]
-    },
-    "30146": {
-      "days": []
     },
     "17262": {
       "days": []
@@ -240,7 +317,7 @@
     "36930": {
       "days": [
         {
-          "date": "2026-11-08",
+          "date": "2026-11-29",
           "weekday": "周日",
           "status_code": 1,
           "status": "available",
@@ -253,7 +330,7 @@
     "50935": {
       "days": [
         {
-          "date": "2026-11-07",
+          "date": "2026-11-28",
           "weekday": "周六",
           "status_code": 3,
           "status": "confirmed",
@@ -264,15 +341,35 @@
       ]
     },
     "49236": {
-      "days": []
+      "days": [
+        {
+          "date": "2026-11-29",
+          "weekday": "周日",
+          "status_code": 1,
+          "status": "available",
+          "status_label": "可报名",
+          "price_cny": 180,
+          "remark": ""
+        }
+      ]
     },
     "47156": {
-      "days": []
+      "days": [
+        {
+          "date": "2026-11-29",
+          "weekday": "周日",
+          "status_code": 4,
+          "status": "unknown",
+          "status_label": "待确认",
+          "price_cny": 190,
+          "remark": ""
+        }
+      ]
     },
     "34921": {
       "days": [
         {
-          "date": "2026-11-07",
+          "date": "2026-11-28",
           "weekday": "周六",
           "status_code": 3,
           "status": "confirmed",

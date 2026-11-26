@@ -7,27 +7,75 @@
   "source": "游侠客公开活动详情页",
   "source_method": "youxiake-go 按关键词检索活动 ID，再逐条读取官方详情页核对车程、距离与爬升",
   "weather": {
-    "date": "2026-11-07",
+    "date": "2026-11-28",
     "weekday": "周六",
     "source": "中国天气网",
     "note": "城市/区县 7 天预报，非徒步起点精确预报",
     "locations": {
-      "48168": {"name": "海盐", "url": "https://www.weather.com.cn/weather/101210306.shtml"},
-      "36819": {"name": "苏州", "url": "https://www.weather.com.cn/weather/101190401.shtml"},
-      "50459": {"name": "安吉", "url": "https://www.weather.com.cn/weather/101210203.shtml"},
-      "20108": {"name": "句容", "url": "https://www.weather.com.cn/weather/101190304.shtml"},
-      "46983": {"name": "柯桥", "url": "https://www.weather.com.cn/weather/101210506.shtml"},
-      "43845": {"name": "奉化", "url": "https://www.weather.com.cn/weather/101210405.shtml"},
-      "30146": {"name": "萧山", "url": "https://www.weather.com.cn/weather/101210102.shtml"},
-      "17262": {"name": "苏州", "url": "https://www.weather.com.cn/weather/101190401.shtml"},
-      "47966": {"name": "杭州", "url": "https://www.weather.com.cn/weather/101210101.shtml"},
-      "36930": {"name": "常熟", "url": "https://www.weather.com.cn/weather/101190402.shtml"},
-      "50935": {"name": "苏州", "url": "https://www.weather.com.cn/weather/101190401.shtml"},
-      "49236": {"name": "常熟", "url": "https://www.weather.com.cn/weather/101190402.shtml"},
-      "47156": {"name": "无锡", "url": "https://www.weather.com.cn/weather/101190201.shtml"},
-      "34921": {"name": "富阳", "url": "https://www.weather.com.cn/weather/101210108.shtml"},
-      "54973": {"name": "湖州", "url": "https://www.weather.com.cn/weather/101210201.shtml"},
-      "20343": {"name": "苏州", "url": "https://www.weather.com.cn/weather/101190401.shtml"}
+      "48168": {
+        "name": "海盐",
+        "url": "https://www.weather.com.cn/weather/101210306.shtml"
+      },
+      "36819": {
+        "name": "苏州",
+        "url": "https://www.weather.com.cn/weather/101190401.shtml"
+      },
+      "50459": {
+        "name": "安吉",
+        "url": "https://www.weather.com.cn/weather/101210203.shtml"
+      },
+      "20108": {
+        "name": "句容",
+        "url": "https://www.weather.com.cn/weather/101190304.shtml"
+      },
+      "46983": {
+        "name": "柯桥",
+        "url": "https://www.weather.com.cn/weather/101210506.shtml"
+      },
+      "43845": {
+        "name": "奉化",
+        "url": "https://www.weather.com.cn/weather/101210405.shtml"
+      },
+      "30146": {
+        "name": "萧山",
+        "url": "https://www.weather.com.cn/weather/101210102.shtml"
+      },
+      "17262": {
+        "name": "苏州",
+        "url": "https://www.weather.com.cn/weather/101190401.shtml"
+      },
+      "47966": {
+        "name": "杭州",
+        "url": "https://www.weather.com.cn/weather/101210101.shtml"
+      },
+      "36930": {
+        "name": "常熟",
+        "url": "https://www.weather.com.cn/weather/101190402.shtml"
+      },
+      "50935": {
+        "name": "苏州",
+        "url": "https://www.weather.com.cn/weather/101190401.shtml"
+      },
+      "49236": {
+        "name": "常熟",
+        "url": "https://www.weather.com.cn/weather/101190402.shtml"
+      },
+      "47156": {
+        "name": "无锡",
+        "url": "https://www.weather.com.cn/weather/101190201.shtml"
+      },
+      "34921": {
+        "name": "富阳",
+        "url": "https://www.weather.com.cn/weather/101210108.shtml"
+      },
+      "54973": {
+        "name": "湖州",
+        "url": "https://www.weather.com.cn/weather/101210201.shtml"
+      },
+      "20343": {
+        "name": "苏州",
+        "url": "https://www.weather.com.cn/weather/101190401.shtml"
+      }
     }
   },
   "routes": [
@@ -39,9 +87,19 @@
       "screenshot_order": 1,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 90, "max_minutes": 90, "text": "单程车程1.5小时"},
+      "drive_time": {
+        "min_minutes": 90,
+        "max_minutes": 90,
+        "text": "单程车程1.5小时"
+      },
       "hiking_options": [
-        {"key": "default", "label": "大环线", "distance_km": 18, "ascent_m": 700, "note": "官方写今日徒步18km，爬升700m左右"}
+        {
+          "key": "default",
+          "label": "大环线",
+          "distance_km": 18,
+          "ascent_m": 700,
+          "note": "官方写今日徒步18km，爬升700m左右"
+        }
       ],
       "source_excerpt": "大环线，今日徒步18km，爬升700米左右。",
       "source_url": "https://www.youxiake.com/lines.html?id=48168",
@@ -55,9 +113,19 @@
       "screenshot_order": 2,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 120, "max_minutes": 120, "text": "2h左右"},
+      "drive_time": {
+        "min_minutes": 120,
+        "max_minutes": 120,
+        "text": "2h左右"
+      },
       "hiking_options": [
-        {"key": "default", "label": "画龙线", "distance_km": 16, "ascent_m": 1000, "note": "路况丰富，野路为主"}
+        {
+          "key": "default",
+          "label": "画龙线",
+          "distance_km": 16,
+          "ascent_m": 1000,
+          "note": "路况丰富，野路为主"
+        }
       ],
       "source_excerpt": "徒步16km，累计爬升1000m左右，路况丰富，野路为主",
       "source_url": "https://www.youxiake.com/lines.html?id=36819",
@@ -71,9 +139,19 @@
       "screenshot_order": 3,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 210, "max_minutes": 210, "text": "约3.5小时"},
+      "drive_time": {
+        "min_minutes": 210,
+        "max_minutes": 210,
+        "text": "约3.5小时"
+      },
       "hiking_options": [
-        {"key": "default", "label": "默认路线", "distance_km": 9, "ascent_m": 900, "note": "官方写累计爬升900m+；最高海拔约1025m"}
+        {
+          "key": "default",
+          "label": "默认路线",
+          "distance_km": 9,
+          "ascent_m": 900,
+          "note": "官方写累计爬升900m+；最高海拔约1025m"
+        }
       ],
       "source_excerpt": "累计爬升900m＋左右；最高海拔1025m左右 徒步距离9公里左右",
       "source_url": "https://www.youxiake.com/lines.html?id=50459",
@@ -87,9 +165,19 @@
       "screenshot_order": 4,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 240, "max_minutes": 240, "text": "4h左右"},
+      "drive_time": {
+        "min_minutes": 240,
+        "max_minutes": 240,
+        "text": "4h左右"
+      },
       "hiking_options": [
-        {"key": "default", "label": "默认路线", "distance_km": 6, "ascent_m": 427, "note": "官方写5–6km，表格按6km计；徒步＋攀爬，手脚并用，强度较大"}
+        {
+          "key": "default",
+          "label": "默认路线",
+          "distance_km": 6,
+          "ascent_m": 427,
+          "note": "官方写5–6km，表格按6km计；徒步＋攀爬，手脚并用，强度较大"
+        }
       ],
       "source_excerpt": "全程约徒步5-6km，累计爬升427米，用时大约4-5小时，徒步＋攀爬，手脚并用，强度较大",
       "source_url": "https://www.youxiake.com/lines.html?id=20108",
@@ -103,9 +191,19 @@
       "screenshot_order": 5,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 210, "max_minutes": 210, "text": "3.5h左右"},
+      "drive_time": {
+        "min_minutes": 210,
+        "max_minutes": 210,
+        "text": "3.5h左右"
+      },
       "hiking_options": [
-        {"key": "default", "label": "默认路线", "distance_km": 12, "ascent_m": 800, "note": "野外徒步路线，建议带登山杖"}
+        {
+          "key": "default",
+          "label": "默认路线",
+          "distance_km": 12,
+          "ascent_m": 800,
+          "note": "野外徒步路线，建议带登山杖"
+        }
       ],
       "source_excerpt": "徒步约12km,累计爬升800m左右，野外徒步路线，请带登山杖",
       "source_url": "https://www.youxiake.com/lines.html?id=46983",
@@ -119,9 +217,19 @@
       "screenshot_order": 6,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 180, "max_minutes": 180, "text": "3h左右"},
+      "drive_time": {
+        "min_minutes": 180,
+        "max_minutes": 180,
+        "text": "3h左右"
+      },
       "hiking_options": [
-        {"key": "default", "label": "默认路线", "distance_km": 10, "ascent_m": 628, "note": "需攀爬四段铁链，恐高者慎报；最高海拔425m"}
+        {
+          "key": "default",
+          "label": "默认路线",
+          "distance_km": 10,
+          "ascent_m": 628,
+          "note": "需攀爬四段铁链，恐高者慎报；最高海拔425m"
+        }
       ],
       "source_excerpt": "徒步距离10km，全程爬升约628m，最高海拔425m，以山路、台阶路、山间小道为主。",
       "source_url": "https://www.youxiake.com/lines.html?id=43845",
@@ -135,9 +243,19 @@
       "screenshot_order": 7,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 180, "max_minutes": 180, "text": "3h左右"},
+      "drive_time": {
+        "min_minutes": 180,
+        "max_minutes": 180,
+        "text": "3h左右"
+      },
       "hiking_options": [
-        {"key": "default", "label": "全程穿越", "distance_km": 20, "ascent_m": 1100, "note": "活动亮点写全程约20km、爬升约1100m；台阶较多"}
+        {
+          "key": "default",
+          "label": "全程穿越",
+          "distance_km": 20,
+          "ascent_m": 1100,
+          "note": "活动亮点写全程约20km、爬升约1100m；台阶较多"
+        }
       ],
       "source_excerpt": "全程约20km，耗时6-8h左右……爬升约1100米左右",
       "source_url": "https://www.youxiake.com/lines.html?id=30146",
@@ -151,9 +269,19 @@
       "screenshot_order": 8,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 150, "max_minutes": 150, "text": "上海-灵岩山，车程约2.5h"},
+      "drive_time": {
+        "min_minutes": 150,
+        "max_minutes": 150,
+        "text": "上海-灵岩山，车程约2.5h"
+      },
       "hiking_options": [
-        {"key": "default", "label": "默认路线", "distance_km": 18, "ascent_m": 850, "note": "地貌丰富，富有挑战性"}
+        {
+          "key": "default",
+          "label": "默认路线",
+          "distance_km": 18,
+          "ascent_m": 850,
+          "note": "地貌丰富，富有挑战性"
+        }
       ],
       "source_excerpt": "今日徒步约18km，累计爬升850m，地貌丰富，富有挑战性",
       "source_url": "https://www.youxiake.com/lines.html?id=17262",
@@ -167,9 +295,19 @@
       "screenshot_order": 9,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 180, "max_minutes": 180, "text": "上海-杭州 约3小时"},
+      "drive_time": {
+        "min_minutes": 180,
+        "max_minutes": 180,
+        "text": "上海-杭州 约3小时"
+      },
       "hiking_options": [
-        {"key": "default", "label": "默认路线", "distance_km": 21, "ascent_m": 800, "note": "官方写累计爬升750–800m，表格按800m计"}
+        {
+          "key": "default",
+          "label": "默认路线",
+          "distance_km": 21,
+          "ascent_m": 800,
+          "note": "官方写累计爬升750–800m，表格按800m计"
+        }
       ],
       "source_excerpt": "全程21公里，累计爬升750-800米，耗时约5-6小时",
       "source_url": "https://www.youxiake.com/lines.html?id=47966",
@@ -183,9 +321,19 @@
       "screenshot_order": 10,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 90, "max_minutes": 90, "text": "约1.5h"},
+      "drive_time": {
+        "min_minutes": 90,
+        "max_minutes": 90,
+        "text": "约1.5h"
+      },
       "hiking_options": [
-        {"key": "default", "label": "六上六下", "distance_km": 18, "ascent_m": 1100, "note": "最高海拔约270m"}
+        {
+          "key": "default",
+          "label": "六上六下",
+          "distance_km": 18,
+          "ascent_m": 1100,
+          "note": "最高海拔约270m"
+        }
       ],
       "source_excerpt": "虞山线 累计爬升1100m左右；最高海拔270m左右 徒步距离18公里左右",
       "source_url": "https://www.youxiake.com/lines.html?id=36930",
@@ -199,9 +347,19 @@
       "screenshot_order": 11,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 90, "max_minutes": 120, "text": "1.5-2小时"},
+      "drive_time": {
+        "min_minutes": 90,
+        "max_minutes": 120,
+        "text": "1.5-2小时"
+      },
       "hiking_options": [
-        {"key": "default", "label": "默认路线", "distance_km": 18, "ascent_m": 750, "note": "疾速入门线路，距离仍接近18km"}
+        {
+          "key": "default",
+          "label": "默认路线",
+          "distance_km": 18,
+          "ascent_m": 750,
+          "note": "疾速入门线路，距离仍接近18km"
+        }
       ],
       "source_excerpt": "全程约18km，爬升约750m",
       "source_url": "https://www.youxiake.com/lines.html?id=50935",
@@ -215,9 +373,19 @@
       "screenshot_order": 12,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 120, "max_minutes": 120, "text": "约2h"},
+      "drive_time": {
+        "min_minutes": 120,
+        "max_minutes": 120,
+        "text": "约2h"
+      },
       "hiking_options": [
-        {"key": "default", "label": "雄鹰轨迹", "distance_km": 12, "ascent_m": 700, "note": "官方写徒步约12km，爬升700m左右"}
+        {
+          "key": "default",
+          "label": "雄鹰轨迹",
+          "distance_km": 12,
+          "ascent_m": 700,
+          "note": "官方写徒步约12km，爬升700m左右"
+        }
       ],
       "source_excerpt": "徒步距离约12km，爬升700m左右，徒步时间约5h",
       "source_url": "https://www.youxiake.com/lines.html?id=49236",
@@ -231,9 +399,19 @@
       "screenshot_order": 13,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 120, "max_minutes": 120, "text": "上海-宝界山林公园，车程约2.0h"},
+      "drive_time": {
+        "min_minutes": 120,
+        "max_minutes": 120,
+        "text": "上海-宝界山林公园，车程约2.0h"
+      },
       "hiking_options": [
-        {"key": "default", "label": "大环线", "distance_km": 22, "ascent_m": 800, "note": "野路为主"}
+        {
+          "key": "default",
+          "label": "大环线",
+          "distance_km": 22,
+          "ascent_m": 800,
+          "note": "野路为主"
+        }
       ],
       "source_excerpt": "今日徒步22km上下，累计爬升800m，野路为主",
       "source_url": "https://www.youxiake.com/lines.html?id=47156",
@@ -247,9 +425,19 @@
       "screenshot_order": 14,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 240, "max_minutes": 240, "text": "4H"},
+      "drive_time": {
+        "min_minutes": 240,
+        "max_minutes": 240,
+        "text": "4H"
+      },
       "hiking_options": [
-        {"key": "default", "label": "默认路线", "distance_km": 13, "ascent_m": 1000, "note": "登富阳最高峰"}
+        {
+          "key": "default",
+          "label": "默认路线",
+          "distance_km": 13,
+          "ascent_m": 1000,
+          "note": "登富阳最高峰"
+        }
       ],
       "source_excerpt": "徒步13KM，累计爬升1000M。",
       "source_url": "https://www.youxiake.com/lines.html?id=34921",
@@ -263,9 +451,19 @@
       "screenshot_order": 15,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 150, "max_minutes": 150, "text": "单程2.5小时左右"},
+      "drive_time": {
+        "min_minutes": 150,
+        "max_minutes": 150,
+        "text": "单程2.5小时左右"
+      },
       "hiking_options": [
-        {"key": "default", "label": "大环线", "distance_km": 18, "ascent_m": 1000, "note": "官方写爬升1000m+；步道、土路为主"}
+        {
+          "key": "default",
+          "label": "大环线",
+          "distance_km": 18,
+          "ascent_m": 1000,
+          "note": "官方写爬升1000m+；步道、土路为主"
+        }
       ],
       "source_excerpt": "今日徒步18km左右，累计爬升1000m＋，步道、土路为主",
       "source_url": "https://www.youxiake.com/lines.html?id=54973",
@@ -279,9 +477,19 @@
       "screenshot_order": 16,
       "departure_city": "上海",
       "days": 1,
-      "drive_time": {"min_minutes": 120, "max_minutes": 120, "text": "上海-光福，车程约2h"},
+      "drive_time": {
+        "min_minutes": 120,
+        "max_minutes": 120,
+        "text": "上海-光福，车程约2h"
+      },
       "hiking_options": [
-        {"key": "default", "label": "小七尖", "distance_km": 19, "ascent_m": 950, "note": "官方写爬升950m+；最高海拔234m"}
+        {
+          "key": "default",
+          "label": "小七尖",
+          "distance_km": 19,
+          "ascent_m": 950,
+          "note": "官方写爬升950m+；最高海拔234m"
+        }
       ],
       "source_excerpt": "今日徒步约19km，累计爬升950+m，最高海拔234m",
       "source_url": "https://www.youxiake.com/lines.html?id=20343",

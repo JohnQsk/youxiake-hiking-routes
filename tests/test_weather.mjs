@@ -6,10 +6,13 @@ const datasets = [
   ["advanced", JSON.parse(await readFile(new URL("../data/advanced-routes.json", import.meta.url), "utf8"))],
 ];
 
+const availability = JSON.parse(await readFile(new URL("../data/weekend-availability.json", import.meta.url), "utf8"));
+
 for (const [name, data] of datasets) {
   const weather = data.weather;
   assert.ok(weather, `${name} needs a weather block`);
-  assert.equal(weather.date, "2026-11-07", `${name} weather date must be Saturday`);
+  assert.equal(new Date(`${weather.date}T12:00:00+08:00`).getDay(), 6, `${name} weather date must be a Saturday`);
+  assert.equal(weather.date, availability.weekend.start, `${name} weather date must match the current weekend snapshot`);
   assert.equal(weather.weekday, "周六");
   assert.equal(weather.source, "中国天气网");
   assert.ok(weather.note.includes("非徒步起点"), `${name} must state that the forecast is not trailhead-precise`);

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "title": "上海一日徒步路线实验数据集",
   "checked_at": "2026-11-05",
-  "scope": "Shaoke 提供的游侠客 App 截图中的 21 条上海出发一日游；不是游侠客全量路线库。",
+  "scope": "21 条来自 Shaoke 的 App 候选截图（2026-11-05 核对）；64717 新昌十九峰为 2026-11-26 经官方详情页核对后新增。不是游侠客全量路线库。",
   "source": "游侠客公开活动详情页",
   "weather": {
     "date": "2026-11-28",
@@ -93,6 +93,10 @@
       "41796": {
         "name": "慈溪",
         "url": "https://www.weather.com.cn/weather/101210403.shtml"
+      },
+      "64717": {
+        "name": "新昌",
+        "url": "https://www.weather.com.cn/weather/101210504.shtml"
       }
     }
   },
@@ -642,6 +646,31 @@
       "source_excerpt": "徒步全长约6.6km，累计上升230米左右，海拔435米。",
       "source_url": "https://www.youxiake.com/lines.html?id=41796",
       "checked_at": "2026-11-05"
+    },
+    {
+      "id": "64717",
+      "name": "限时免门票·新昌十九峰 | 丹崖侠影穿幽谷",
+      "short_name": "新昌十九峰",
+      "screenshot_order": 22,
+      "departure_city": "上海",
+      "days": 1,
+      "drive_time": {
+        "min_minutes": 210,
+        "max_minutes": 210,
+        "text": "上海—新昌，约3.5小时，中途服务区停靠一次"
+      },
+      "hiking_options": [
+        {
+          "key": "standard-loop",
+          "label": "东门进东门出环线",
+          "distance_km": 5,
+          "ascent_m": 300,
+          "note": "999级云梯+3.2km飞龙栈道（含玻璃栈道、138m飞龙天桥）+千丈幽谷下行；台阶窄且陡，官方建议护膝与登山杖"
+        }
+      ],
+      "source_excerpt": "999级台阶加栈道，全天步行约5公里、累计爬升约300米；上海至新昌单程约3.5小时。限时免大门票至2026-11-30（仅免首道大门票，飞龙栈道20元/人必经路段现场自理）。另有65026浦东龙阳集合点版本，行程相同。",
+      "source_url": "https://www.youxiake.com/lines.html?id=64717",
+      "checked_at": "2026-11-26"
     }
   ]
 }

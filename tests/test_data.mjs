@@ -5,17 +5,17 @@ const data = JSON.parse(await readFile(new URL("../data/routes.json", import.met
 const routes = data.routes;
 
 assert.equal(data.schema_version, 1);
-assert.equal(data.checked_at, "2026-11-05");
-assert.equal(routes.length, 21, "The seed dataset must contain 21 routes");
-assert.equal(new Set(routes.map((route) => route.id)).size, 21, "IDs must be unique");
-assert.deepEqual(routes.map((route) => route.screenshot_order), Array.from({ length: 21 }, (_, i) => i + 1));
+assert.match(data.checked_at, /^\d{4}-\d{2}-\d{2}$/);
+assert.equal(routes.length, 22, "The dataset must contain 21 seed routes + 64717 added 2026-11-26");
+assert.equal(new Set(routes.map((route) => route.id)).size, 22, "IDs must be unique");
+assert.deepEqual(routes.map((route) => route.screenshot_order), Array.from({ length: 22 }, (_, i) => i + 1));
 
 for (const route of routes) {
   assert.match(route.id, /^\d+$/);
   assert.ok(route.name && route.short_name);
   assert.equal(route.departure_city, "上海");
   assert.equal(route.days, 1);
-  assert.equal(route.checked_at, "2026-11-05");
+  assert.match(route.checked_at, /^\d{4}-\d{2}-\d{2}$/, `${route.id} checked_at`);
   assert.equal(route.source_url, `https://www.youxiake.com/lines.html?id=${route.id}`);
   assert.ok(route.drive_time.text);
   assert.ok(Number.isFinite(route.drive_time.min_minutes));

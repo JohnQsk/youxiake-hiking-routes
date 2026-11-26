@@ -44,7 +44,7 @@ assert.ok(html.beginner.includes('id="weekend-filter"'));
 assert.ok(html.beginner.includes('id="weekend-note"'));
 assert.ok(html.beginner.includes(weekendLabel), `beginner table header must show current weekend ${weekendLabel}`);
 assert.ok(html.beginner.includes("周六天气"));
-assert.ok(html.beginner.includes("一日入门种子路线"));
+assert.ok(html.beginner.includes("一日入门路线"));
 assert.ok(html.beginner.includes('id="route-rows"'));
 assert.ok(!html.beginner.includes("先看清路线"), "Beginner table page should not keep the oversized slogan");
 assert.ok(html.advanced.includes('data-routes="./data/advanced-routes.json"'));

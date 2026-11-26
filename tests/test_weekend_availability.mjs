@@ -22,7 +22,6 @@ assert.ok(end > new Date(`${availability.checked_at.slice(0, 10)}T00:00:00+08:00
 const beginnerIds = beginner.routes.map((route) => route.id);
 const advancedIds = advanced.routes.map((route) => route.id);
 const allIds = [...beginnerIds, ...advancedIds];
-assert.equal(allIds.length, 37);
 assert.deepEqual(Object.keys(availability.routes).sort(), [...allIds].sort(), "Availability must cover every route");
 
 const LABELS = { 1: "可报名", 2: "暂满", 3: "确定成行", 4: "待确认" };
